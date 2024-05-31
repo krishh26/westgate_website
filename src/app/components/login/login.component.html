@@ -1,0 +1,86 @@
+<main id="main">
+  <section class="section-registration">
+    <div class="container d-flex justify-content-center align-items-center" style="height:100vh; overflow:hidden;">
+      <div class="row d-flex align-items-center justify-content-center"
+        style="overflow:hidden; width:100vw; height:100vh;">
+
+        <div class="col-lg-4 col-xl-4 col-12">
+          <div class="company-details mobile-hide">
+
+            <div id="Logincarousel" class="carousel slide" data-bs-ride="carousel">
+              <!-- <div class="carousel-indicators">
+                <button type="button" data-bs-target="#Logincarousel" data-bs-slide-to="0" class="active"
+                  aria-current="true" aria-label="Slide 1"></button>
+                <button type="button" data-bs-target="#Logincarousel" data-bs-slide-to="1"
+                  aria-label="Slide 2"></button>
+              </div> -->
+              <div class="carousel-inner">
+                <div class="carousel-item" *ngFor="let item of projectList">
+                  <div class="carousel-caption d-none d-md-block">
+                    <p class="mb-0"><strong>Project Name : </strong>{{item?.projectName}}</p>
+                    <p class="mb-0"><strong>Project Type : </strong>{{item?.projectType}}</p>
+                    <p class="mb-0"><strong>Client : </strong>{{item?.clientName}}</p>
+                    <p class="mb-0"><strong>Value : </strong> £{{item?.value}}</p>
+                    <p class="mb-0"><strong>Category : </strong>{{item?.category}}</p>
+                    <p class="mb-0"><strong>Industry : </strong>{{item?.industry}}</p>
+                    <p class="mb-0"><strong>Website : </strong>{{item?.website}}</p>
+                  </div>
+                </div>
+                <div class="carousel-item active">
+                  <div class="carousel-caption d-none d-md-block">
+                    <p class="mb-0"><strong>Project Name</strong></p>
+                    <p class="mb-0">GB-London: Good Cause Summaries -<br>
+                      Business Analysis and Solution Design </p>
+                    <p class="mb-0"><strong>Client</strong> National Heritage Memorial</p>
+                    <p class="mb-0"><strong>Value</strong> £25,000 to £50,000</p>
+                    <p class="mb-0"><strong>Category</strong> Business analysis consultancy services</p>
+                    <p><strong>Industry </strong> IT</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-4 col-xl-4 col-12">
+          <div class="login-modal mb-4">
+            <div class="login-body">
+              <h4 class="mb-4"><strong>Hello!</strong></h4>
+              <form [formGroup]="loginForm" (ngSubmit)="login()">
+                <div class="form-group">
+                  <label>Email id</label>
+                  <input type="email" formControlName="email" class="form-control" placeholder="Enter email id">
+                  <span class="text-danger"
+                    *ngIf="loginForm.controls.email?.touched &&loginForm.controls.email?.errors?.['required']"> Please
+                    enter email</span>
+                  <span class="text-danger"
+                    *ngIf="loginForm.controls.email?.touched &&loginForm.controls.email?.errors?.['pattern']"> Please
+                    enter valid email</span>
+                </div>
+                <div class="form-group">
+                  <label>Password</label>
+                  <input type="password" formControlName="password" class="form-control" placeholder="Enter password">
+                  <span class="text-danger"
+                    *ngIf="loginForm.controls.password?.touched && loginForm.controls.password?.errors?.['required']">Please
+                    enter valid password. </span>
+                  <span class="text-danger"
+                    *ngIf=" loginForm.controls.password?.touched && loginForm.controls.password?.errors?.['pattern']">
+                    Please enter valid password.</span>
+                </div>
+                <!-- <p><a href="forgot-password.html">Forgot Password?</a></p> -->
+                <button type="submit" class="btn btn-lightgray w-100">Login</button>
+              </form>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-12 text-center">
+              <p>If New, Register Now?</p>
+              <button routerLink="/register" class="btn btn-lightgray w-100">Register</button>
+            </div>
+          </div>
+        </div>
+
+      </div> <!-- Inner row -->
+    </div>
+  </section>
+
+</main><!-- End #main -->

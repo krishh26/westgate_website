@@ -1,0 +1,147 @@
+<footer id="footer">
+  <div class="container">
+    <div class="row">
+      <div class="col-12 text-end">
+        <a routerLink="/faq">
+          <p><em>Please refer to FAQ’s for more information </em></p>
+        </a>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-lg-8 col-xl-8 col-12">
+        <div class="row">
+          <div class="col-xl-3 col-lg-3 col-sm-6 col-md-6 col-12 ">
+            <ul class="footernav border-end">
+              <li><a routerLink="/about-us">About Us</a></li>
+              <li><a routerLink="/opportunities">Opportunities</a></li>
+              <li><a routerLink="/why-us">Why Us</a></li>
+              <li><a routerLink="/working-modal">Working Model</a></li>
+              <li><a routerLink="/our-services">Our Services</a></li>
+              <li><a routerLink="/faq">FAQ’s</a></li>
+              <li><a routerLink="/register">Register </a></li>
+            </ul>
+            <ul class="social-media">
+              <li><a href="https://www.linkedin.com/company/westgate-it-hub-private-limited/" target="_blank"><i
+                    class="bi bi-linkedin"></i></a></li>
+              <li><a href="https://x.com/WestgateIthub" target="_blank"><i class="bi bi-twitter"></i></a></li>
+              <li><a href="https://www.instagram.com/westgate_it_hub?igsh=MWFydjdhOWxoOWpqZg%3D%3D&utm_source=qr"
+                  target="_blank"><i class="bi bi-instagram"></i></a></li>
+              <li><a href="https://www.facebook.com/share/ng8BGqN3WigU3MXc/?mibextid=kFxxJD" target="_blank"><i
+                    class="bi bi-facebook"></i></a></li>
+              <li><a href="https://youtube.com/@westgateithub?si=2vTFVaXXecSTDHtl" target="_blank"><i
+                    class="bi bi-youtube"></i></a></li>
+              <li><a href="https://wa.me/qr/MO46CUOVZ4RCI1" target="_blank"><i class="bi bi-whatsapp"></i></a></li>
+            </ul>
+          </div>
+          <div class="col-xl-3 col-lg-3 col-sm-6 col-md-6 col-12">
+            <p><strong>Our Services</strong></p>
+            <ul class="footernav">
+              <li><a href="/our-services">Identifying Business</a></li>
+              <li><a href="/our-services">Feasibility Study</a></li>
+              <li><a href="/our-services">Bid Review</a></li>
+              <li><a href="/our-services">Bid Writing</a></li>
+              <li><a href="/our-services">Project Support</a></li>
+              <li><a href="/our-services">Bid Management</a></li>
+            </ul>
+          </div>
+          <div class="col-xl-3 col-lg-3 col-sm-6 col-md-6 col-12">
+            <p><strong>Industries</strong></p>
+            <ul class="footernav">
+              <li><a href="javascript;">Manufacturing</a></li>
+              <li><a href="javascript;">Healthcare</a></li>
+              <li><a href="javascript;">Retail Sector</a></li>
+              <li><a href="javascript;">Education</a></li>
+              <li><a href="javascript;">IT Industry</a></li>
+            </ul>
+          </div>
+          <div class="col-xl-3 col-lg-3 col-sm-6 col-md-6 col-12">
+            <p><strong>Expertise</strong></p>
+            <ul class="footernav">
+              <li><a href="javascript;">Software Development</a></li>
+              <li><a href="javascript;">Quality Assurance /Quality Control</a></li>
+              <li><a href="javascript;">Managed IT Services</a></li>
+              <li><a href="javascript;">Cyber Security </a></li>
+              <li><a href="javascript;">Cloud Services</a></li>
+              <li><a href="javascript;">Digital Marketing & SEO</a></li>
+              <li><a href="javascript;">IT Products</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <div class="col-lg-4 col-xl-4 col-sm-4 col-md-4 col-12">
+        <img src="./assets/img/newlogo.png" width="220" class="mb-3" />
+        <p><strong>Address</strong></p>
+        <p>No.6, Uttarahalli Main Rd, 2nd Stage, Jayanagar housing society layout,
+          Chikkalasandra, Bengaluru, Karnataka 560061</p>
+        <p><a style="color: #007bff;">+91 7781978685</a></p>
+        <p><a href="mailto:support@westgateithub.com">support@westgateithub.com</a></p>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<!-- <div id="preloader"></div> -->
+<div class="live-chat-buttons">
+  <a routerLink="/faq"><img src="./assets/img/faq-icon.png" width="38" /><br>FAQ</a>
+  <a href="javascript;" data-bs-toggle="modal" data-bs-target="#QuickChatModal" (click)="getChatBetweenTwoUser()"><img
+      src="./assets/img/live-chat-icon.png" width="38" /><br><span class="text-danger">Live</span> chat</a>
+</div>
+
+<!-- Chat Modal -->
+<div class="modal fade" id="QuickChatModal" tabindex="-1" aria-labelledby="QuickChatModalLabel" aria-hidden="true">
+  <div class="modal-dialog Quickchat-modal-dialog modal-dialog-scrollable">
+    <div class="modal-content animate-bottom">
+      <div class="modal-header" style="display: block;">
+        <div class="row">
+          <div class="col-12 modal-title">
+            <h5 class="mb-0" id="QuickChatModalLabel">WESTGATE IT HUB</h5>
+            <P class="mb-0">We'll reply as soon as we can</P>
+          </div>
+        </div>
+        <button type="button" class="btn-close btn-fix" data-bs-dismiss="modal" aria-label="Close"><i
+            class="bi bi-x-lg"></i></button>
+      </div>
+      <div class="modal-body">
+        <ul class="chatHistory">
+          <ng-container *ngFor="let message of chatList">
+          <li class="replies" *ngIf="message?.messageFor == 'User'">
+            <p>{{message?.message}}</p>
+          </li>
+          <li class="sender" *ngIf="message?.messageFor == 'Admin'">
+            <p>{{message?.message}}</p>
+          </li>
+        </ng-container>
+          <!-- <li class="sender">
+            <form class="Form-message">
+              <div class="form-group">
+                <input type="text" class="form-control" placeholder="Full Name">
+              </div>
+              <div class="form-group">
+                <input type="email" class="form-control" placeholder="Email" />
+              </div>
+              <div class="form-group">
+                <textarea class="form-control" placeholder="Message" rows="2" cols="100"></textarea>
+              </div>
+              <div class="form-group text-center">
+                <button type="submit" class="btn btn-dark w-100">SUBMIT</button>
+              </div>
+            </form>
+          </li> -->
+        </ul>
+
+      </div>
+      <div class="modal-footer" style="display: block;">
+        <div class="row justi-content-between">
+          <div class="col-10 p-0">
+            <div class="form-group mb-0">
+              <input type="text" class="form-control border-0" placeholder="Message..." [formControl]="chatMessage">
+            </div>
+          </div>
+          <div class="col-2 text-center">
+            <button type="button" class="btn btn-send-message"><i class="bi bi-send-fill" (click)="sendMessage()"></i></button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
