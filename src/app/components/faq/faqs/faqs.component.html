@@ -16,19 +16,1101 @@
       </div>
     </div>
   </section>
-  <section class="pt-0">
+  <section class="p-0">
     <div class="container">
-      <ul class="ListMenu2 mt-2">
-        <li><a routerLink="/faq/about">About Us</a></li>
-        <li><a routerLink="/faq/general">General</a></li>
-        <li><a routerLink="/faq/cost-pricing">Cost and Pricing</a></li>
-        <li><a routerLink="/faq/legal-and-compliance">Legal and Compliance</a></li>
-        <li><a routerLink="/faq/registration-process">Registration Process</a></li>
-        <li><a routerLink="/faq/partnership-opportunity">Partnership Opportunities</a></li>
-        <li><a routerLink="/faq/supplier-eligibility">Supplier Eligibility Criteria</a></li>
-        <!-- <li><a routerLink="/faq/project-management">Project Management</a></li>
-        <li><a routerLink="/faq/service-offer">Service Offerings</a></li> -->
+      <ul class="nav nav-tabs" id="myTab" role="tablist">
+        <li class="nav-item" role="presentation">
+          <button class="nav-link active" id="aboutus-tab" data-bs-toggle="tab" data-bs-target="#aboutus" type="button"
+            role="tab" aria-controls="aboutus" aria-selected="true">About us</button>
+        </li>
+        <li class="nav-item" role="presentation">
+          <button class="nav-link" id="general-tab" data-bs-toggle="tab" data-bs-target="#general" type="button"
+            role="tab" aria-controls="general" aria-selected="false">General</button>
+        </li>
+        <li class="nav-item" role="presentation">
+          <button class="nav-link" id="costpricing-tab" data-bs-toggle="tab" data-bs-target="#costpricing" type="button"
+            role="tab" aria-controls="costpricing" aria-selected="false">Cost & Pricing</button>
+        </li>
+        <li class="nav-item" role="presentation">
+          <button class="nav-link" id="legalcomplience-tab" data-bs-toggle="tab" data-bs-target="#legalcomplience"
+            type="button" role="tab" aria-controls="legalcomplience" aria-selected="false">Legal & Compliance</button>
+        </li>
+        <li class="nav-item" role="presentation">
+          <button class="nav-link" id="registrationprocess-tab" data-bs-toggle="tab"
+            data-bs-target="#registrationprocess" type="button" role="tab" aria-controls="registrationprocess"
+            aria-selected="false">Registration process</button>
+        </li>
+        <li class="nav-item" role="presentation">
+          <button class="nav-link" id="partnershipopportunities-tab" data-bs-toggle="tab"
+            data-bs-target="#partnershipopportunities" type="button" role="tab" aria-controls="partnershipopportunities"
+            aria-selected="false">Partnership opportunities</button>
+        </li>
+        <li class="nav-item" role="presentation">
+          <button class="nav-link" id="suppliereligibility-tab" data-bs-toggle="tab"
+            data-bs-target="#suppliereligibility" type="button" role="tab" aria-controls="suppliereligibility"
+            aria-selected="false">Supplier eligibility criteria</button>
+        </li>
       </ul>
+      <div class="tab-content" id="myTabContent">
+        <div class="tab-pane fade show active" id="aboutus" role="tabpanel" aria-labelledby="aboutus-tab">
+          <div class="accordion accordion-flush" id="accordionFlushExample">
+            <div class="accordion-item">
+              <h2 class="accordion-header" id="flush-headingOne">
+                <button class="accordion-button background-light-gray" type="button" data-bs-toggle="collapse"
+                  data-bs-target="#flush-collapseOne" aria-expanded="false" aria-controls="flush-collapseOne">
+                  <div class="row align-items-center w-100">
+                    <div class="col-lg-auto col-xl-auto col-12 number-box">1</div>
+                    <div class="col-lg-10 col-xl-10 col-12 question-box">About Westgate?</div>
+                  </div>
+                </button>
+              </h2>
+              <div id="flush-collapseOne" class="accordion-collapse collapse" aria-labelledby="flush-headingOne"
+                data-bs-parent="#accordionFlushExample">
+                <div class="accordion-body">
+                  Westgate is a leading consultancy firm specializing in connecting Indian IT companies with
+                  opportunities in the UK IT sector.
+                </div>
+              </div>
+            </div>
+
+            <div class="accordion-item">
+              <h2 class="accordion-header" id="flush-headingTwo">
+                <button class="accordion-button background-light-gray" type="button" data-bs-toggle="collapse"
+                  data-bs-target="#flush-collapseTwo" aria-expanded="false" aria-controls="flush-collapseTwo">
+                  <div class="row align-items-center w-100">
+                    <div class="col-lg-auto col-xl-auto col-12 number-box">2</div>
+                    <div class="col-lg-10 col-xl-10 col-12 question-box">When was Westgate established?</div>
+                  </div>
+                </button>
+              </h2>
+              <div id="flush-collapseTwo" class="accordion-collapse collapse" aria-labelledby="flush-headingTwo"
+                data-bs-parent="#accordionFlushExample">
+                <div class="accordion-body">
+                  Westgate was established in 2022 with the aim of bridging the gap between Indian IT firms and UK
+                  projects.
+                </div>
+              </div>
+            </div>
+
+            <div class="accordion-item">
+              <h2 class="accordion-header" id="flush-headingThree">
+                <button class="accordion-button background-light-gray" type="button" data-bs-toggle="collapse"
+                  data-bs-target="#flush-collapseThree" aria-expanded="false" aria-controls="flush-collapseThree">
+                  <div class="row align-items-center w-100">
+                    <div class="col-lg-auto col-xl-auto col-12 number-box">3</div>
+                    <div class="col-lg-10 col-xl-10 col-12 question-box">About Spectrum?</div>
+                  </div>
+                </button>
+              </h2>
+              <div id="flush-collapseThree" class="accordion-collapse collapse" aria-labelledby="flush-headingThree"
+                data-bs-parent="#accordionFlushExample">
+                <div class="accordion-body">
+                  Spectrum IT Hub Limited is a UK-based company specializing in providing IT solutions and services.
+                  With a strong presence in the UK market, Spectrum offers a range of IT services, including software
+                  development, consultancy, and project management, to clients across various industries.
+                </div>
+              </div>
+            </div>
+
+            <div class="accordion-item">
+              <h2 class="accordion-header" id="flush-headingFour">
+                <button class="accordion-button background-light-gray" type="button" data-bs-toggle="collapse"
+                  data-bs-target="#flush-collapseFour" aria-expanded="false" aria-controls="flush-collapseFour">
+                  <div class="row align-items-center w-100">
+                    <div class="col-lg-auto col-xl-auto col-12 number-box">4</div>
+                    <div class="col-lg-10 col-xl-10 col-12 question-box">How are Westgate and Spectrum related?</div>
+                  </div>
+                </button>
+              </h2>
+              <div id="flush-collapseFour" class="accordion-collapse collapse" aria-labelledby="flush-headingFour"
+                data-bs-parent="#accordionFlushExample">
+                <div class="accordion-body">
+                  Westgate and Spectrum are strategic partners collaborating to bridge the gap between Indian IT
+                  companies and the UK IT sector. While Westgate focuses on facilitating access to UK IT projects for
+                  Indian firms, Spectrum leverages its established presence in the UK to support project execution and
+                  client management.
+                </div>
+              </div>
+            </div>
+
+            <div class="accordion-item">
+              <h2 class="accordion-header" id="flush-headingFive">
+                <button class="accordion-button background-light-gray" type="button" data-bs-toggle="collapse"
+                  data-bs-target="#flush-collapseFive" aria-expanded="false" aria-controls="flush-collapseFive">
+                  <div class="row align-items-center w-100">
+                    <div class="col-lg-auto col-xl-auto col-12 number-box">5</div>
+                    <div class="col-lg-10 col-xl-10 col-12 question-box">What services does Westgate offer?</div>
+                  </div>
+                </button>
+              </h2>
+              <div id="flush-collapseFive" class="accordion-collapse collapse" aria-labelledby="flush-headingFive"
+                data-bs-parent="#accordionFlushExample">
+                <div class="accordion-body">
+                  Westgate offers a range of services including project identification, bid support, and partnership
+                  facilitation.
+                </div>
+              </div>
+            </div>
+
+            <div class="accordion-item">
+              <h2 class="accordion-header" id="flush-headingSix">
+                <button class="accordion-button background-light-gray" type="button" data-bs-toggle="collapse"
+                  data-bs-target="#flush-collapseSix" aria-expanded="false" aria-controls="flush-collapseSix">
+                  <div class="row align-items-center w-100">
+                    <div class="col-lg-auto col-xl-auto col-12 number-box">6</div>
+                    <div class="col-lg-10 col-xl-10 col-12 question-box">What are public sector Projects?</div>
+                  </div>
+                </button>
+              </h2>
+              <div id="flush-collapseSix" class="accordion-collapse collapse" aria-labelledby="flush-headingSix"
+                data-bs-parent="#accordionFlushExample">
+                <div class="accordion-body">
+                  Public sector projects are government-funded initiatives. They include projects in areas such as
+                  healthcare, education, transportation, and social welfare.
+                </div>
+              </div>
+            </div>
+
+            <div class="accordion-item">
+              <h2 class="accordion-header" id="flush-headingSeven">
+                <button class="accordion-button background-light-gray" type="button" data-bs-toggle="collapse"
+                  data-bs-target="#flush-collapseSeven" aria-expanded="false" aria-controls="flush-collapseSeven">
+                  <div class="row align-items-center w-100">
+                    <div class="col-lg-auto col-xl-auto col-12 number-box">7</div>
+                    <div class="col-lg-10 col-xl-10 col-12 question-box">What are Private sector Projects?</div>
+                  </div>
+                </button>
+              </h2>
+              <div id="flush-collapseSeven" class="accordion-collapse collapse" aria-labelledby="flush-headingSeven"
+                data-bs-parent="#accordionFlushExample">
+                <div class="accordion-body">
+                  Private sector projects are initiatives undertaken by privately owned businesses or organizations for
+                  commercial purposes. These can include construction projects, product development, marketing
+                  campaigns, and other ventures aimed at generating profit in the competitive market.
+                </div>
+              </div>
+            </div>
+
+            <div class="accordion-item">
+              <h2 class="accordion-header" id="flush-headingEight">
+                <button class="accordion-button background-light-gray" type="button" data-bs-toggle="collapse"
+                  data-bs-target="#flush-collapseEight" aria-expanded="false" aria-controls="flush-collapseEight">
+                  <div class="row align-items-center w-100">
+                    <div class="col-lg-auto col-xl-auto col-12 number-box">8</div>
+                    <div class="col-lg-10 col-xl-10 col-12 question-box">How can potential Suppliers get in touch with
+                      Westgate?</div>
+                  </div>
+                </button>
+              </h2>
+              <div id="flush-collapseEight" class="accordion-collapse collapse" aria-labelledby="flush-headingEight"
+                data-bs-parent="#accordionFlushExample">
+                <div class="accordion-body">
+                  Potential Suppliers can contact Westgate through the website, email, or phone to discuss their
+                  requirements and explore partnership opportunities.
+                </div>
+              </div>
+            </div>
+
+          </div>
+        </div>
+
+        <div class="tab-pane fade" id="general" role="tabpanel" aria-labelledby="general-tab">
+          <div class="accordion accordion-flush" id="accordionFlushExample">
+            <div class="accordion-item">
+              <h2 class="accordion-header" id="flush-gheadingOne">
+                <button class="accordion-button background-light-gray" type="button" data-bs-toggle="collapse"
+                  data-bs-target="#flush-collapseOneg" aria-expanded="false" aria-controls="flush-collapseOneg">
+                  <div class="row align-items-center w-100">
+                    <div class="col-lg-auto col-xl-auto col-12 number-box">1</div>
+                    <div class="col-lg-10 col-xl-10 col-12 question-box">What are public sector Projects?</div>
+                  </div>
+                </button>
+              </h2>
+              <div id="flush-collapseOneg" class="accordion-collapse collapse" aria-labelledby="flush-gheadingOne"
+                data-bs-parent="#accordionFlushExample">
+                <div class="accordion-body">
+                  Public sector projects are government-funded initiatives. They include projects in areas such as
+                  healthcare, education, transportation, and social welfare.
+                </div>
+              </div>
+            </div>
+
+            <div class="accordion-item">
+              <h2 class="accordion-header" id="flush-gheadingTwo">
+                <button class="accordion-button background-light-gray" type="button" data-bs-toggle="collapse"
+                  data-bs-target="#flush-collapseTwo" aria-expanded="false" aria-controls="flush-collapseTwo">
+                  <div class="row align-items-center w-100">
+                    <div class="col-lg-auto col-xl-auto col-12 number-box">2</div>
+                    <div class="col-lg-10 col-xl-10 col-12 question-box">What are Private sector Projects?</div>
+                  </div>
+                </button>
+              </h2>
+              <div id="flush-collapseTwo" class="accordion-collapse collapse" aria-labelledby="flush-gheadingTwo"
+                data-bs-parent="#accordionFlushExample">
+                <div class="accordion-body">
+                  Private sector projects are initiatives undertaken by privately owned businesses or organizations for
+                  commercial purposes. These can include product development, marketing campaigns, and other ventures
+                  aimed at generating profit in the competitive market.
+                </div>
+              </div>
+            </div>
+
+            <div class="accordion-item">
+              <h2 class="accordion-header" id="flush-gheadingThree">
+                <button class="accordion-button background-light-gray" type="button" data-bs-toggle="collapse"
+                  data-bs-target="#flush-collapseThreeg" aria-expanded="false" aria-controls="flush-collapseThreeg">
+                  <div class="row align-items-center w-100">
+                    <div class="col-lg-auto col-xl-auto col-12 number-box">3</div>
+                    <div class="col-lg-10 col-xl-10 col-12 question-box">How can potential Suppliers get in touch with
+                      Westgate?</div>
+                  </div>
+                </button>
+              </h2>
+              <div id="flush-collapseThreeg" class="accordion-collapse collapse" aria-labelledby="flush-gheadingThree"
+                data-bs-parent="#accordionFlushExample">
+                <div class="accordion-body">
+                  Potential Suppliers can contact Westgate through the website, email (support@westgateithub.com), or
+                  phone (+917781978685) to discuss their requirements and explore partnership opportunities.
+                </div>
+              </div>
+            </div>
+
+            <div class="accordion-item">
+              <h2 class="accordion-header" id="flush-gheadingFour">
+                <button class="accordion-button background-light-gray" type="button" data-bs-toggle="collapse"
+                  data-bs-target="#flush-collapseFourg" aria-expanded="false" aria-controls="flush-collapseFourg">
+                  <div class="row align-items-center w-100">
+                    <div class="col-lg-auto col-xl-auto col-12 number-box">4</div>
+                    <div class="col-lg-10 col-xl-10 col-12 question-box">Does Westgate offer ongoing support to
+                      Suppliers beyond project identification and bid submission?</div>
+                  </div>
+                </button>
+              </h2>
+              <div id="flush-collapseFourg" class="accordion-collapse collapse" aria-labelledby="flush-gheadingFour"
+                data-bs-parent="#accordionFlushExample">
+                <div class="accordion-body">
+                  Yes, Westgate offers ongoing support to Suppliers throughout the project lifecycle, including
+                  Feasibility Study, Bid Tracking, Bid Review and/or Writing Support from UK Experts and support to the
+                  Supplier once the Bid is Awarded in Project Co-ordination with Client.
+                </div>
+              </div>
+            </div>
+
+            <div class="accordion-item">
+              <h2 class="accordion-header" id="flush-gheadingFive">
+                <button class="accordion-button background-light-gray" type="button" data-bs-toggle="collapse"
+                  data-bs-target="#flush-collapseFiveg" aria-expanded="false" aria-controls="flush-collapseFiveg">
+                  <div class="row align-items-center w-100">
+                    <div class="col-lg-auto col-xl-auto col-12 number-box">5</div>
+                    <div class="col-lg-10 col-xl-10 col-12 question-box">How Westgate is able to access the
+                      international projects?</div>
+                  </div>
+                </button>
+              </h2>
+              <div id="flush-collapseFiveg" class="accordion-collapse collapse" aria-labelledby="flush-gheadingFive"
+                data-bs-parent="#accordionFlushExample">
+                <div class="accordion-body">
+                  Westgate uses its connections and partnership with Spectrum IT Hub in the UK to find and access
+                  international projects. This helps us connect Indian IT companies with global opportunities.
+                </div>
+              </div>
+            </div>
+
+            <div class="accordion-item">
+              <h2 class="accordion-header" id="flush-gheadingSix">
+                <button class="accordion-button background-light-gray" type="button" data-bs-toggle="collapse"
+                  data-bs-target="#flush-collapseSixg" aria-expanded="false" aria-controls="flush-collapseSixg">
+                  <div class="row align-items-center w-100">
+                    <div class="col-lg-auto col-xl-auto col-12 number-box">6</div>
+                    <div class="col-lg-10 col-xl-10 col-12 question-box">What is meant by and what is the purpose of the
+                      feasibility study conducted by Westgate?</div>
+                  </div>
+                </button>
+              </h2>
+              <div id="flush-collapseSixg" class="accordion-collapse collapse" aria-labelledby="flush-gheadingSix"
+                data-bs-parent="#accordionFlushExample">
+                <div class="accordion-body">
+                  The feasibility study by Westgate evaluates the technical, financial, and operational aspects of
+                  potential projects. Its purpose is to determine if a project is viable and aligns with the supplier's
+                  capabilities, ensuring successful project outcomes.
+                </div>
+              </div>
+            </div>
+
+            <div class="accordion-item">
+              <h2 class="accordion-header" id="flush-gheadingSeven">
+                <button class="accordion-button background-light-gray" type="button" data-bs-toggle="collapse"
+                  data-bs-target="#flush-collapseSeveng" aria-expanded="false" aria-controls="flush-collapseSeveng">
+                  <div class="row align-items-center w-100">
+                    <div class="col-lg-auto col-xl-auto col-12 number-box">7</div>
+                    <div class="col-lg-10 col-xl-10 col-12 question-box">How does Westgate match the perfect project for
+                      suppliers?</div>
+                  </div>
+                </button>
+              </h2>
+              <div id="flush-collapseSeveng" class="accordion-collapse collapse" aria-labelledby="flush-gheadingSeven"
+                data-bs-parent="#accordionFlushExample">
+                <div class="accordion-body">
+                  Westgate focuses on identifying projects that align with suppliers' strengths and capabilities by
+                  matching them with case studies and project requirements.
+                </div>
+              </div>
+            </div>
+
+            <div class="accordion-item">
+              <h2 class="accordion-header" id="flush-gheadingEight">
+                <button class="accordion-button background-light-gray" type="button" data-bs-toggle="collapse"
+                  data-bs-target="#flush-collapseEightg" aria-expanded="false" aria-controls="flush-collapseEightg">
+                  <div class="row align-items-center w-100">
+                    <div class="col-lg-auto col-xl-auto col-12 number-box">8</div>
+                    <div class="col-lg-10 col-xl-10 col-12 question-box">What happens during the handover call/meeting
+                      at Westgate?</div>
+                  </div>
+                </button>
+              </h2>
+              <div id="flush-collapseEightg" class="accordion-collapse collapse" aria-labelledby="flush-gheadingEight"
+                data-bs-parent="#accordionFlushExample">
+                <div class="accordion-body">
+                  During the handover call/meeting, Westgate updates suppliers about matched projects, explains project
+                  requirements, and discusses bid writing options.
+                </div>
+              </div>
+            </div>
+
+            <div class="accordion-item">
+              <h2 class="accordion-header" id="flush-gheadingNine">
+                <button class="accordion-button background-light-gray" type="button" data-bs-toggle="collapse"
+                  data-bs-target="#flush-collapseNineg" aria-expanded="false" aria-controls="flush-collapseNineg">
+                  <div class="row align-items-center w-100">
+                    <div class="col-lg-auto col-xl-auto col-12 number-box">9</div>
+                    <div class="col-lg-10 col-xl-10 col-12 question-box">What are the bid writing options offered by
+                      Westgate?</div>
+                  </div>
+                </button>
+              </h2>
+              <div id="flush-collapseNineg" class="accordion-collapse collapse" aria-labelledby="flush-gheadingNine"
+                data-bs-parent="#accordionFlushExample">
+                <div class="accordion-body">
+                  Westgate offers three bid writing options: Business as Usual (BAU), Bid Writing Company Review, and
+                  Bid Writing by the Bid Writing Company.
+                </div>
+              </div>
+            </div>
+
+            <div class="accordion-item">
+              <h2 class="accordion-header" id="flush-gheadingTen">
+                <button class="accordion-button background-light-gray" type="button" data-bs-toggle="collapse"
+                  data-bs-target="#flush-collapseTeng" aria-expanded="false" aria-controls="flush-collapseTeng">
+                  <div class="row align-items-center w-100">
+                    <div class="col-lg-auto col-xl-auto col-12 number-box">10</div>
+                    <div class="col-lg-10 col-xl-10 col-12 question-box">How does Westgate support suppliers during the
+                      bid submission process?</div>
+                  </div>
+                </button>
+              </h2>
+              <div id="flush-collapseTeng" class="accordion-collapse collapse" aria-labelledby="flush-gheadingTen"
+                data-bs-parent="#accordionFlushExample">
+                <div class="accordion-body">
+                  Westgate's Bid Submission Team ensures all necessary documents are in order before bid submission,
+                  including formatting and word limit checks.
+                </div>
+              </div>
+            </div>
+
+            <div class="accordion-item">
+              <h2 class="accordion-header" id="flush-gheadingEleven">
+                <button class="accordion-button background-light-gray" type="button" data-bs-toggle="collapse"
+                  data-bs-target="#flush-collapseEleveng" aria-expanded="false" aria-controls="flush-collapseEleveng">
+                  <div class="row align-items-center w-100">
+                    <div class="col-lg-auto col-xl-auto col-12 number-box">11</div>
+                    <div class="col-lg-10 col-xl-10 col-12 question-box">What role does the project coordinator play
+                      upon successful project award?</div>
+                  </div>
+                </button>
+              </h2>
+              <div id="flush-collapseEleveng" class="accordion-collapse collapse" aria-labelledby="flush-gheadingEleven"
+                data-bs-parent="#accordionFlushExample">
+                <div class="accordion-body">
+                  The project coordinator, based in the UK, coordinates with internal teams and Suppliers, manages
+                  client visits, and ensures project success from day one once the Project is Awarded.
+                </div>
+              </div>
+            </div>
+            <div class="accordion-item">
+              <h2 class="accordion-header" id="flush-gheadingTwelve">
+                <button class="accordion-button background-light-gray" type="button" data-bs-toggle="collapse"
+                  data-bs-target="#flush-collapseTwelve" aria-expanded="false" aria-controls="flush-collapseTwelve">
+                  <div class="row align-items-center w-100">
+                    <div class="col-lg-auto col-xl-auto col-12 number-box">12</div>
+                    <div class="col-lg-10 col-xl-10 col-12 question-box">What is meant by competitor analysis?</div>
+                  </div>
+                </button>
+              </h2>
+              <div id="flush-collapseTwelve" class="accordion-collapse collapse" aria-labelledby="flush-gheadingTwelve"
+                data-bs-parent="#accordionFlushExample">
+                <div class="accordion-body">
+                  Competitor analysis involves researching and gathering information about competitors' projects,
+                  strengths, and weaknesses. This helps identify trends, areas for improvement, and strategies to
+                  enhance your bids and overall market position. Westgate's Competitor Analysis Team researches and
+                  gathers information about competitors' projects, strengths, and weaknesses to enhance our solutions
+                  and strategies.
+                </div>
+              </div>
+            </div>
+
+          </div>
+        </div>
+        <div class="tab-pane fade" id="costpricing" role="tabpanel" aria-labelledby="costpricing-tab">
+          <div class="accordion accordion-flush" id="accordionFlushExample">
+            <div class="accordion-item">
+              <h2 class="accordion-header" id="flush-cheadingOne">
+                <button class="accordion-button background-light-gray" type="button" data-bs-toggle="collapse"
+                  data-bs-target="#flush-collapseOnec" aria-expanded="false" aria-controls="flush-collapseOnec">
+                  <div class="row align-items-center w-100">
+                    <div class="col-lg-auto col-xl-auto col-12 number-box">1</div>
+                    <div class="col-lg-10 col-xl-10 col-12 question-box">What services does Westgate offer?</div>
+                  </div>
+                </button>
+              </h2>
+              <div id="flush-collapseOnec" class="accordion-collapse collapse" aria-labelledby="flush-cheadingOne"
+                data-bs-parent="#accordionFlushExample">
+                <div class="accordion-body">
+                  Westgate offers a range of services including project identification, bid support and partnership
+                  facilitation.
+                </div>
+              </div>
+            </div>
+
+            <div class="accordion-item">
+              <h2 class="accordion-header" id="flush-cheadingTwo">
+                <button class="accordion-button background-light-gray" type="button" data-bs-toggle="collapse"
+                  data-bs-target="#flush-collapseTwoc" aria-expanded="false" aria-controls="flush-collapseTwoc">
+                  <div class="row align-items-center w-100">
+                    <div class="col-lg-auto col-xl-auto col-12 number-box">2</div>
+                    <div class="col-lg-10 col-xl-10 col-12 question-box">What are the key benefits of partnering with
+                      Westgate?</div>
+                  </div>
+                </button>
+              </h2>
+              <div id="flush-collapseTwoc" class="accordion-collapse collapse" aria-labelledby="flush-cheadingTwo"
+                data-bs-parent="#accordionFlushExample">
+                <div class="accordion-body">
+                  Westgate offers numerous benefits, including access to lucrative UK IT projects, personalized support,
+                  industry expertise and provide you the support of international Business Development Team for your
+                  business.
+                </div>
+              </div>
+            </div>
+
+            <div class="accordion-item">
+              <h2 class="accordion-header" id="flush-cheadingThree">
+                <button class="accordion-button background-light-gray" type="button" data-bs-toggle="collapse"
+                  data-bs-target="#flush-collapseThreec" aria-expanded="false" aria-controls="flush-collapseThreec">
+                  <div class="row align-items-center w-100">
+                    <div class="col-lg-auto col-xl-auto col-12 number-box">3</div>
+                    <div class="col-lg-10 col-xl-10 col-12 question-box">What are the different subscription packages
+                      offered by Westgate, and what do they include?</div>
+                  </div>
+                </button>
+              </h2>
+              <div id="flush-collapseThreec" class="accordion-collapse collapse" aria-labelledby="flush-cheadingThree"
+                data-bs-parent="#accordionFlushExample">
+                <div class="accordion-body">
+                  Westgate offers Basic, Silver, Gold, Platinum along with Professional and Professional + subscription
+                  packages, each with varying levels of services and benefits.
+                </div>
+              </div>
+            </div>
+
+            <div class="accordion-item">
+              <h2 class="accordion-header" id="flush-cheadingFour">
+                <button class="accordion-button background-light-gray" type="button" data-bs-toggle="collapse"
+                  data-bs-target="#flush-collapseFourc" aria-expanded="false" aria-controls="flush-collapseFourc">
+                  <div class="row align-items-center w-100">
+                    <div class="col-lg-auto col-xl-auto col-12 number-box">4</div>
+                    <div class="col-lg-10 col-xl-10 col-12 question-box">What is the Fee Structure for the Subscription
+                      Plans?</div>
+                  </div>
+                </button>
+              </h2>
+              <div id="flush-collapseFourc" class="accordion-collapse collapse" aria-labelledby="flush-cheadingFour"
+                data-bs-parent="#accordionFlushExample">
+                <div class="accordion-body">
+                  Please refer to “Our Services Page” for the fee structure information.
+                </div>
+              </div>
+            </div>
+
+            <div class="accordion-item">
+              <h2 class="accordion-header" id="flush-cheadingFive">
+                <button class="accordion-button background-light-gray" type="button" data-bs-toggle="collapse"
+                  data-bs-target="#flush-collapseFivec" aria-expanded="false" aria-controls="flush-collapseFivec">
+                  <div class="row align-items-center w-100">
+                    <div class="col-lg-auto col-xl-auto col-12 number-box">5</div>
+                    <div class="col-lg-10 col-xl-10 col-12 question-box">What is the Subscription Plan Structure?</div>
+                  </div>
+                </button>
+              </h2>
+              <div id="flush-collapseFivec" class="accordion-collapse collapse" aria-labelledby="flush-cheadingFive"
+                data-bs-parent="#accordionFlushExample">
+                <div class="accordion-body">
+                  <p>Refer to the Table below to Understand the Services we provide against each of our Subscription
+                    plan.</p>
+                  <table _ngcontent-ng-c2800606449="" class="table">
+                    <thead _ngcontent-ng-c2800606449="">
+                      <tr _ngcontent-ng-c2800606449="">
+                        <th _ngcontent-ng-c2800606449="" style="border: 1px solid black; font-weight: bold;">
+                          Subscription</th>
+                        <th _ngcontent-ng-c2800606449="" style="border: 1px solid black; font-weight: bold;">Access OSS
+                        </th>
+                        <th _ngcontent-ng-c2800606449="" style="border: 1px solid black; font-weight: bold;">View All
+                          Projects</th>
+                        <th _ngcontent-ng-c2800606449="" style="border: 1px solid black; font-weight: bold;">Matched
+                          Projects</th>
+                        <th _ngcontent-ng-c2800606449="" style="border: 1px solid black; font-weight: bold;">Feasibility
+                          Study</th>
+                        <th _ngcontent-ng-c2800606449="" style="border: 1px solid black; font-weight: bold;">Bid Review
+                          by Westgate Experts</th>
+                        <th _ngcontent-ng-c2800606449="" style="border: 1px solid black; font-weight: bold;">Bid Review
+                          by SHU Experts</th>
+                      </tr>
+                    </thead>
+                    <tbody _ngcontent-ng-c2800606449="">
+                      <tr _ngcontent-ng-c2800606449="">
+                        <td _ngcontent-ng-c2800606449="" style="border: 1px solid black; font-weight: bold;">Basic</td>
+                        <td _ngcontent-ng-c2800606449="" style="border: 1px solid black;">Included</td>
+                        <td _ngcontent-ng-c2800606449="" style="border: 1px solid black;">Included</td>
+                        <td _ngcontent-ng-c2800606449="" style="border: 1px solid black;">Not Included</td>
+                        <td _ngcontent-ng-c2800606449="" style="border: 1px solid black;">Not Included</td>
+                        <td _ngcontent-ng-c2800606449="" style="border: 1px solid black;">Not Included</td>
+                        <td _ngcontent-ng-c2800606449="" style="border: 1px solid black;">Not Included</td>
+                      </tr>
+                      <tr _ngcontent-ng-c2800606449="">
+                        <td _ngcontent-ng-c2800606449="" style="border: 1px solid black; font-weight: bold;">Silver</td>
+                        <td _ngcontent-ng-c2800606449="" style="border: 1px solid black;">Included</td>
+                        <td _ngcontent-ng-c2800606449="" style="border: 1px solid black;">Included</td>
+                        <td _ngcontent-ng-c2800606449="" style="border: 1px solid black;">Included</td>
+                        <td _ngcontent-ng-c2800606449="" style="border: 1px solid black;">Not Included</td>
+                        <td _ngcontent-ng-c2800606449="" style="border: 1px solid black;">Not Included</td>
+                        <td _ngcontent-ng-c2800606449="" style="border: 1px solid black;">Not Included</td>
+                      </tr>
+                      <tr _ngcontent-ng-c2800606449="">
+                        <td _ngcontent-ng-c2800606449="" style="border: 1px solid black; font-weight: bold;">Gold</td>
+                        <td _ngcontent-ng-c2800606449="" style="border: 1px solid black;">Included</td>
+                        <td _ngcontent-ng-c2800606449="" style="border: 1px solid black;">Included</td>
+                        <td _ngcontent-ng-c2800606449="" style="border: 1px solid black;">Included</td>
+                        <td _ngcontent-ng-c2800606449="" style="border: 1px solid black;">Included</td>
+                        <td _ngcontent-ng-c2800606449="" style="border: 1px solid black;">Included</td>
+                        <td _ngcontent-ng-c2800606449="" style="border: 1px solid black;">Not Included</td>
+                      </tr>
+                      <tr _ngcontent-ng-c2800606449="">
+                        <td _ngcontent-ng-c2800606449="" style="border: 1px solid black; font-weight: bold;">Platinum
+                        </td>
+                        <td _ngcontent-ng-c2800606449="" style="border: 1px solid black;">Included</td>
+                        <td _ngcontent-ng-c2800606449="" style="border: 1px solid black;">Included</td>
+                        <td _ngcontent-ng-c2800606449="" style="border: 1px solid black;">Included</td>
+                        <td _ngcontent-ng-c2800606449="" style="border: 1px solid black;">Included</td>
+                        <td _ngcontent-ng-c2800606449="" style="border: 1px solid black;">Included</td>
+                        <td _ngcontent-ng-c2800606449="" style="border: 1px solid black;">Included</td>
+                      </tr>
+                    </tbody>
+                  </table>
+                  <ul _ngcontent-ng-c2800606449="" class="mb-4 mt-4">
+                    <li _ngcontent-ng-c2800606449="">
+                      <span _ngcontent-ng-c2800606449="" style="font-weight: bold;">• Access OSS:</span> Access to
+                      Westgate IT Hub Platform.
+                    </li>
+                    <li _ngcontent-ng-c2800606449="">
+                      <span _ngcontent-ng-c2800606449="" style="font-weight: bold;">• All Projects:</span>Access to List
+                      of all (Live + History) projects in UK IT Market.
+                    </li>
+                    <li _ngcontent-ng-c2800606449="">
+                      <span _ngcontent-ng-c2800606449="" style="font-weight: bold;">• Matched Projects:</span> List of
+                      MATCHED projects against your recorded expertise (Case studies/Experience).
+                    </li>
+                    <li _ngcontent-ng-c2800606449="">
+                      <span _ngcontent-ng-c2800606449="" style="font-weight: bold;">• Feasibility Study:</span>
+                      Performing the full feasibility study of projects documents to prepare for project handover call
+                      between you and WG/SH.
+                    </li>
+                    <li _ngcontent-ng-c2800606449="">
+                      <span _ngcontent-ng-c2800606449="" style="font-weight: bold;">• Bid Review (Westgate Expert):
+                      </span>Review/amendments of your documents prior to engaging with Spectrum IT Hub Limited UK (The
+                      main bidder).
+                    </li>
+                    <li _ngcontent-ng-c2800606449="">
+                      <span _ngcontent-ng-c2800606449="" style="font-weight: bold;">• Bid Review (SHU Expert):
+                      </span>Review/amendments of your solution documents prior to Bid submission of any 25 proposals
+                      written by you during any 12 months.
+                    </li>
+                    <li _ngcontent-ng-c2800606449="">
+                      <span _ngcontent-ng-c2800606449="" style="font-weight: bold;">• On Demand:</span> The below
+                      packages are based on Projects.
+                    </li>
+                    <li _ngcontent-ng-c2800606449="">
+                      <span _ngcontent-ng-c2800606449="" style="font-weight: bold;">• Bid Review (3rd Party Expert):
+                      </span>It is an On-demand Service based on the Project, if the Supplier is happy to engage a 3rd
+                      party market expert within UK (for review/amendments of Bid we agree together).
+                    </li>
+                    <li _ngcontent-ng-c2800606449="">
+                      <span _ngcontent-ng-c2800606449="" style="font-weight: bold;">• Bid Writing (3rd Party Expert):
+                      </span> It is an On-demand Service based on the Project, if the Supplier is happy to engage a 3rd
+                      party market expert within UK for FULL WRITING services of any bid.
+                    </li>
+                  </ul>
+                  <table _ngcontent-ng-c2800606449="" class="table">
+                    <thead _ngcontent-ng-c2800606449="">
+                      <tr _ngcontent-ng-c2800606449="">
+                        <th _ngcontent-ng-c2800606449="" style="border: 1px solid black; font-weight: bold;">ADD-ON
+                          Services</th>
+                        <th _ngcontent-ng-c2800606449="" style="border: 1px solid black; font-weight: bold;">Bid Review
+                          by 3rd Party UK Expert (On demand)</th>
+                        <th _ngcontent-ng-c2800606449="" style="border: 1px solid black; font-weight: bold;">Bid Writing
+                          by 3rd Party UK Expert (on demand)</th>
+                      </tr>
+                    </thead>
+                    <tbody _ngcontent-ng-c2800606449="">
+                      <tr _ngcontent-ng-c2800606449="">
+                        <td _ngcontent-ng-c2800606449="" style="border: 1px solid black; font-weight: bold;">
+                          Professional</td>
+                        <td _ngcontent-ng-c2800606449="" style="border: 1px solid black;">Included</td>
+                        <td _ngcontent-ng-c2800606449="" style="border: 1px solid black;">Not Included</td>
+                      </tr>
+                      <tr _ngcontent-ng-c2800606449="">
+                        <td _ngcontent-ng-c2800606449="" style="border: 1px solid black; font-weight: bold;">
+                          Professional+</td>
+                        <td _ngcontent-ng-c2800606449="" style="border: 1px solid black;">Not Included</td>
+                        <td _ngcontent-ng-c2800606449="" style="border: 1px solid black;">Included</td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
+              </div>
+            </div>
+
+            <div class="accordion-item">
+              <h2 class="accordion-header" id="flush-cheadingSix">
+                <button class="accordion-button background-light-gray" type="button" data-bs-toggle="collapse"
+                  data-bs-target="#flush-collapseSixc" aria-expanded="false" aria-controls="flush-collapseSixc">
+                  <div class="row align-items-center w-100">
+                    <div class="col-lg-auto col-xl-auto col-12 number-box">6</div>
+                    <div class="col-lg-10 col-xl-10 col-12 question-box">What payment methods are accepted for
+                      subscription fees, and when are they due?</div>
+                  </div>
+                </button>
+              </h2>
+              <div id="flush-collapseSixc" class="accordion-collapse collapse" aria-labelledby="flush-cheadingSix"
+                data-bs-parent="#accordionFlushExample">
+                <div class="accordion-body">
+                  Subscription fees can be paid via bank transfer, credit card, or other accepted methods, with payment
+                  due annually upon subscription renewal.
+                </div>
+              </div>
+            </div>
+
+            <div class="accordion-item">
+              <h2 class="accordion-header" id="flush-cheadingSeven">
+                <button class="accordion-button background-light-gray" type="button" data-bs-toggle="collapse"
+                  data-bs-target="#flush-collapseSevenc" aria-expanded="false" aria-controls="flush-collapseSevenc">
+                  <div class="row align-items-center w-100">
+                    <div class="col-lg-auto col-xl-auto col-12 number-box">7</div>
+                    <div class="col-lg-10 col-xl-10 col-12 question-box">Can Suppliers request a breakdown of fees or an
+                      invoice for their subscription package?</div>
+                  </div>
+                </button>
+              </h2>
+              <div id="flush-collapseSevenc" class="accordion-collapse collapse" aria-labelledby="flush-cheadingSeven"
+                data-bs-parent="#accordionFlushExample">
+                <div class="accordion-body">
+                  Unfortunately, no during first year. But YES, for the second and later years. For clarity, you can pay
+                  in 2 instalments from second year at 1 and 7th month.
+                </div>
+              </div>
+            </div>
+
+            <div class="accordion-item">
+              <h2 class="accordion-header" id="flush-cheadingEight">
+                <button class="accordion-button background-light-gray" type="button" data-bs-toggle="collapse"
+                  data-bs-target="#flush-collapseEightc" aria-expanded="false" aria-controls="flush-collapseEightc">
+                  <div class="row align-items-center w-100">
+                    <div class="col-lg-auto col-xl-auto col-12 number-box">8</div>
+                    <div class="col-lg-10 col-xl-10 col-12 question-box">Am I paying any additional fee to Westgate?
+                    </div>
+                  </div>
+                </button>
+              </h2>
+              <div id="flush-collapseEightc" class="accordion-collapse collapse" aria-labelledby="flush-cheadingEight"
+                data-bs-parent="#accordionFlushExample">
+                <div class="accordion-body">
+                  In addition to the Platform fee which you are paying, Westgate will agree a Cost for each successful
+                  Project
+                </div>
+              </div>
+            </div>
+
+          </div>
+        </div>
+        <div class="tab-pane fade" id="legalcomplience" role="tabpanel" aria-labelledby="legalcomplience-tab">
+          <div class="accordion accordion-flush" id="accordionFlushExample">
+            <div class="accordion-item">
+              <h2 class="accordion-header" id="flush-lheadingOne">
+                <button class="accordion-button background-light-gray" type="button" data-bs-toggle="collapse"
+                  data-bs-target="#flush-collapseOnel" aria-expanded="false" aria-controls="flush-collapseOnel">
+                  <div class="row align-items-center w-100">
+                    <div class="col-lg-auto col-xl-auto col-12 number-box">1</div>
+                    <div class="col-lg-10 col-xl-10 col-12 question-box">Is Westgate a registered and compliant company?
+                    </div>
+                  </div>
+                </button>
+              </h2>
+              <div id="flush-collapseOnel" class="accordion-collapse collapse" aria-labelledby="flush-lheadingOne"
+                data-bs-parent="#accordionFlushExample">
+                <div class="accordion-body">
+                  Yes, Westgate is a registered and compliant company, adhering to all relevant laws and regulations
+                  governing its operations.
+                </div>
+              </div>
+            </div>
+
+            <div class="accordion-item">
+              <h2 class="accordion-header" id="flush-lheadingTwo">
+                <button class="accordion-button background-light-gray" type="button" data-bs-toggle="collapse"
+                  data-bs-target="#flush-collapseTwol" aria-expanded="false" aria-controls="flush-collapseTwol">
+                  <div class="row align-items-center w-100">
+                    <div class="col-lg-auto col-xl-auto col-12 number-box">2</div>
+                    <div class="col-lg-10 col-xl-10 col-12 question-box">What legal documents do I need to review before
+                      engaging with Westgate?</div>
+                  </div>
+                </button>
+              </h2>
+              <div id="flush-collapseTwol" class="accordion-collapse collapse" aria-labelledby="flush-lheadingTwo"
+                data-bs-parent="#accordionFlushExample">
+                <div class="accordion-body">
+                  Before engaging with Westgate, Suppliers should review our Terms of Service and the SLA, and any other
+                  relevant legal documents based on any project.
+                </div>
+              </div>
+            </div>
+
+            <div class="accordion-item">
+              <h2 class="accordion-header" id="flush-lheadingThree">
+                <button class="accordion-button background-light-gray" type="button" data-bs-toggle="collapse"
+                  data-bs-target="#flush-collapseThreel" aria-expanded="false" aria-controls="flush-collapseThreel">
+                  <div class="row align-items-center w-100">
+                    <div class="col-lg-auto col-xl-auto col-12 number-box">3</div>
+                    <div class="col-lg-10 col-xl-10 col-12 question-box">Are there any legal obligations or
+                      responsibilities for Suppliers when using Westgate's services?</div>
+                  </div>
+                </button>
+              </h2>
+              <div id="flush-collapseThreel" class="accordion-collapse collapse" aria-labelledby="flush-lheadingThree"
+                data-bs-parent="#accordionFlushExample">
+                <div class="accordion-body">
+                  Spectrum IT Hub Limited is a UK-based company specializing in providing IT solutions and services.
+                  With a strong presence in the UK market, Spectrum offers a range of IT services, including software
+                  development, consultancy, and project management, to clients across various industries.
+                </div>
+              </div>
+            </div>
+
+          </div>
+        </div>
+        <div class="tab-pane fade" id="registrationprocess" role="tabpanel" aria-labelledby="registrationprocess-tab">
+          <div class="accordion accordion-flush" id="accordionFlushExample">
+            <div class="accordion-item">
+              <h2 class="accordion-header" id="flush-rheadingOne">
+                <button class="accordion-button background-light-gray" type="button" data-bs-toggle="collapse"
+                  data-bs-target="#flush-collapseOner" aria-expanded="false" aria-controls="flush-collapseOner">
+                  <div class="row align-items-center w-100">
+                    <div class="col-lg-auto col-xl-auto col-12 number-box">1</div>
+                    <div class="col-lg-10 col-xl-10 col-12 question-box">How do I register as a supplier with Westgate?
+                    </div>
+                  </div>
+                </button>
+              </h2>
+              <div id="flush-collapseOner" class="accordion-collapse collapse" aria-labelledby="flush-rheadingOne"
+                data-bs-parent="#accordionFlushExample">
+                <div class="accordion-body">
+                  To register as a supplier with Westgate, simply fill out the registration form provided on our
+                  website.
+                </div>
+              </div>
+            </div>
+
+            <div class="accordion-item">
+              <h2 class="accordion-header" id="flush-rheadingTwo">
+                <button class="accordion-button background-light-gray" type="button" data-bs-toggle="collapse"
+                  data-bs-target="#flush-collapseTwor" aria-expanded="false" aria-controls="flush-collapseTwor">
+                  <div class="row align-items-center w-100">
+                    <div class="col-lg-auto col-xl-auto col-12 number-box">2</div>
+                    <div class="col-lg-10 col-xl-10 col-12 question-box">What information do I need to provide during
+                      the registration process?</div>
+                  </div>
+                </button>
+              </h2>
+              <div id="flush-collapseTwor" class="accordion-collapse collapse" aria-labelledby="flush-rheadingTwo"
+                data-bs-parent="#accordionFlushExample">
+                <div class="accordion-body">
+                  You will need to provide basic personal information such as your name, designation, email id, and
+                  mobile number, along with company details and subscription preferences.
+                </div>
+              </div>
+            </div>
+
+            <div class="accordion-item">
+              <h2 class="accordion-header" id="flush-rheadingThree">
+                <button class="accordion-button background-light-gray" type="button" data-bs-toggle="collapse"
+                  data-bs-target="#flush-collapseThreer" aria-expanded="false" aria-controls="flush-collapseThreer">
+                  <div class="row align-items-center w-100">
+                    <div class="col-lg-auto col-xl-auto col-12 number-box">3</div>
+                    <div class="col-lg-10 col-xl-10 col-12 question-box">Is there any fee for registering as a supplier
+                      with Westgate?</div>
+                  </div>
+                </button>
+              </h2>
+              <div id="flush-collapseThreer" class="accordion-collapse collapse" aria-labelledby="flush-rheadingThree"
+                data-bs-parent="#accordionFlushExample">
+                <div class="accordion-body">
+                  The registration Process will be completed only when a package has been selected by the supplier. No
+                  Services will not be at free cost. There are 4 subscription packages which any supplier can choose to
+                  complete the Registration with us. Please refer to “Our Services” more information on Fee Structure.
+                </div>
+              </div>
+            </div>
+
+            <div class="accordion-item">
+              <h2 class="accordion-header" id="flush-rheadingFour">
+                <button class="accordion-button background-light-gray" type="button" data-bs-toggle="collapse"
+                  data-bs-target="#flush-collapseFourr" aria-expanded="false" aria-controls="flush-collapseFourr">
+                  <div class="row align-items-center w-100">
+                    <div class="col-lg-auto col-xl-auto col-12 number-box">4</div>
+                    <div class="col-lg-10 col-xl-10 col-12 question-box">Can I bring all my branches under one
+                      registration?</div>
+                  </div>
+                </button>
+              </h2>
+              <div id="flush-collapseFourr" class="accordion-collapse collapse" aria-labelledby="flush-rheadingFour"
+                data-bs-parent="#accordionFlushExample">
+                <div class="accordion-body">
+                  Yes, you can register your multiple branches under the same account.
+                </div>
+              </div>
+            </div>
+
+            <div class="accordion-item">
+              <h2 class="accordion-header" id="flush-rheadingFive">
+                <button class="accordion-button background-light-gray" type="button" data-bs-toggle="collapse"
+                  data-bs-target="#flush-collapseFiver" aria-expanded="false" aria-controls="flush-collapseFiver">
+                  <div class="row align-items-center w-100">
+                    <div class="col-lg-auto col-xl-auto col-12 number-box">5</div>
+                    <div class="col-lg-10 col-xl-10 col-12 question-box">What happens after I submit my registration
+                      form?</div>
+                  </div>
+                </button>
+              </h2>
+              <div id="flush-collapseFiver" class="accordion-collapse collapse" aria-labelledby="flush-rheadingFive"
+                data-bs-parent="#accordionFlushExample">
+                <div class="accordion-body">
+                  After submitting your registration form, our team will review your information and contact you to
+                  complete the registration process.
+                </div>
+              </div>
+            </div>
+
+            <div class="accordion-item">
+              <h2 class="accordion-header" id="flush-rheadingSix">
+                <button class="accordion-button background-light-gray" type="button" data-bs-toggle="collapse"
+                  data-bs-target="#flush-collapseSixr" aria-expanded="false" aria-controls="flush-collapseSixr">
+                  <div class="row align-items-center w-100">
+                    <div class="col-lg-auto col-xl-auto col-12 number-box">6</div>
+                    <div class="col-lg-10 col-xl-10 col-12 question-box">What should I do if I encounter any issues
+                      during the registration process?</div>
+                  </div>
+                </button>
+              </h2>
+              <div id="flush-collapseSixr" class="accordion-collapse collapse" aria-labelledby="flush-rheadingSix"
+                data-bs-parent="#accordionFlushExample">
+                <div class="accordion-body">
+                  If you encounter any issues during the registration process, please contact our customer support team
+                  [support@westgateithub.com or +917781978685] for assistance.
+                </div>
+              </div>
+            </div>
+
+            <div class="accordion-item">
+              <h2 class="accordion-header" id="flush-rheadingSeven">
+                <button class="accordion-button background-light-gray" type="button" data-bs-toggle="collapse"
+                  data-bs-target="#flush-collapseSevenr" aria-expanded="false" aria-controls="flush-collapseSevenr">
+                  <div class="row align-items-center w-100">
+                    <div class="col-lg-auto col-xl-auto col-12 number-box">7</div>
+                    <div class="col-lg-10 col-xl-10 col-12 question-box">Can I register as a supplier if my company is a
+                      startup or newly established?</div>
+                  </div>
+                </button>
+              </h2>
+              <div id="flush-collapseSevenr" class="accordion-collapse collapse" aria-labelledby="flush-rheadingSeven"
+                data-bs-parent="#accordionFlushExample">
+                <div class="accordion-body">
+                  We welcome startups and newly established companies as long as they can justify their recent works as,
+                  it’s Westgate’s Policy to engage with any supplier only when they have case study recorded.
+                </div>
+              </div>
+            </div>
+
+          </div>
+        </div>
+        <div class="tab-pane fade" id="partnershipopportunities" role="tabpanel"
+          aria-labelledby="partnershipopportunities-tab">
+          <div class="accordion accordion-flush" id="accordionFlushExample">
+            <div class="accordion-item">
+              <h2 class="accordion-header" id="flush-pheadingOne">
+                <button class="accordion-button background-light-gray" type="button" data-bs-toggle="collapse"
+                  data-bs-target="#flush-collapseOnep" aria-expanded="false" aria-controls="flush-collapseOnep">
+                  <div class="row align-items-center w-100">
+                    <div class="col-lg-auto col-xl-auto col-12 number-box">1</div>
+                    <div class="col-lg-10 col-xl-10 col-12 question-box">What are the eligibility criteria for Indian IT
+                      firms to become partners with Westgate?</div>
+                  </div>
+                </button>
+              </h2>
+              <div id="flush-collapseOnep" class="accordion-collapse collapse" aria-labelledby="flush-pheadingOne"
+                data-bs-parent="#accordionFlushExample">
+                <div class="accordion-body">
+                  Eligibility criteria include being a registered IT firm in India, having a business track record with
+                  case studies of previous projects, agreeing to pay fees/commissions to Westgate, among others.
+                </div>
+              </div>
+            </div>
+
+            <div class="accordion-item">
+              <h2 class="accordion-header" id="flush-pheadingTwo">
+                <button class="accordion-button background-light-gray" type="button" data-bs-toggle="collapse"
+                  data-bs-target="#flush-collapseTwop" aria-expanded="false" aria-controls="flush-collapseTwop">
+                  <div class="row align-items-center w-100">
+                    <div class="col-lg-auto col-xl-auto col-12 number-box">2</div>
+                    <div class="col-lg-10 col-xl-10 col-12 question-box">Can Indian IT firms choose their preferred
+                      working models when partnering with Westgate?</div>
+                  </div>
+                </button>
+              </h2>
+              <div id="flush-collapseTwop" class="accordion-collapse collapse" aria-labelledby="flush-pheadingTwo"
+                data-bs-parent="#accordionFlushExample">
+                <div class="accordion-body">
+                  Yes, Indian IT firms can choose from various working models such as subcontracting only, hybrid,
+                  on-site, and resource sharing, based on their preferences and project requirements.
+                </div>
+              </div>
+            </div>
+
+            <div class="accordion-item">
+              <h2 class="accordion-header" id="flush-pheadingThree">
+                <button class="accordion-button background-light-gray" type="button" data-bs-toggle="collapse"
+                  data-bs-target="#flush-collapseThreep" aria-expanded="false" aria-controls="flush-collapseThreep">
+                  <div class="row align-items-center w-100">
+                    <div class="col-lg-auto col-xl-auto col-12 number-box">3</div>
+                    <div class="col-lg-10 col-xl-10 col-12 question-box">What is the difference between the
+                      subcontracting-only model and the hybrid model?</div>
+                  </div>
+                </button>
+              </h2>
+              <div id="flush-collapseThreep" class="accordion-collapse collapse" aria-labelledby="flush-pheadingThree"
+                data-bs-parent="#accordionFlushExample">
+                <div class="accordion-body">
+                  The subcontracting-only model involves Indian IT firms subcontracting projects to their own team in
+                  India, while the hybrid model combines subcontracting and direct involvement based on project needs.
+                </div>
+              </div>
+            </div>
+
+            <div class="accordion-item">
+              <h2 class="accordion-header" id="flush-pheadingFour">
+                <button class="accordion-button background-light-gray" type="button" data-bs-toggle="collapse"
+                  data-bs-target="#flush-collapseFourp" aria-expanded="false" aria-controls="flush-collapseFourp">
+                  <div class="row align-items-center w-100">
+                    <div class="col-lg-auto col-xl-auto col-12 number-box">4</div>
+                    <div class="col-lg-10 col-xl-10 col-12 question-box">How does the on-site model work for Indian IT
+                      firms partnering with Westgate?</div>
+                  </div>
+                </button>
+              </h2>
+              <div id="flush-collapseFourp" class="accordion-collapse collapse" aria-labelledby="flush-pheadingFour"
+                data-bs-parent="#accordionFlushExample">
+                <div class="accordion-body">
+                  In the on-site model, Indian IT firms are directly involved in on-site project management and
+                  execution, providing hands-on support and expertise.
+                </div>
+              </div>
+            </div>
+
+            <div class="accordion-item">
+              <h2 class="accordion-header" id="flush-pheadingFive">
+                <button class="accordion-button background-light-gray" type="button" data-bs-toggle="collapse"
+                  data-bs-target="#flush-collapseFivep" aria-expanded="false" aria-controls="flush-collapseFivep">
+                  <div class="row align-items-center w-100">
+                    <div class="col-lg-auto col-xl-auto col-12 number-box">5</div>
+                    <div class="col-lg-10 col-xl-10 col-12 question-box">What are the benefits of the resource-sharing
+                      model offered by Westgate?</div>
+                  </div>
+                </button>
+              </h2>
+              <div id="flush-collapseFivep" class="accordion-collapse collapse" aria-labelledby="flush-pheadingFive"
+                data-bs-parent="#accordionFlushExample">
+                <div class="accordion-body">
+                  The resource-sharing model enables Indian IT firms to generate recurring income by sharing expert
+                  resources with UK Suppliers for specific projects.
+                </div>
+              </div>
+            </div>
+
+          </div>
+        </div>
+        <div class="tab-pane fade" id="suppliereligibility" role="tabpanel" aria-labelledby="suppliereligibility-tab">
+          <div class="accordion accordion-flush" id="accordionFlushExample">
+            <div class="accordion-item">
+              <h2 class="accordion-header" id="flush-sheadingOne">
+                <button class="accordion-button background-light-gray" type="button" data-bs-toggle="collapse"
+                  data-bs-target="#flush-collapseOnes" aria-expanded="false" aria-controls="flush-collapseOnes">
+                  <div class="row align-items-center w-100">
+                    <div class="col-lg-auto col-xl-auto col-12 number-box">1</div>
+                    <div class="col-lg-10 col-xl-10 col-12 question-box">What are the eligibility criteria for Indian IT
+                      businesses to become suppliers/sub-contractors with Westgate?</div>
+                  </div>
+                </button>
+              </h2>
+              <div id="flush-collapseOnes" class="accordion-collapse collapse" aria-labelledby="flush-sheadingOne"
+                data-bs-parent="#accordionFlushExample">
+                <div class="accordion-body">
+                  The eligibility criteria include being a registered IT firm in India, having a business track record
+                  with case studies of previous projects, and agreeing to pay the fee/commission for accessing
+                  Westgate's services.
+                </div>
+              </div>
+            </div>
+
+            <div class="accordion-item">
+              <h2 class="accordion-header" id="flush-sheadingTwo">
+                <button class="accordion-button background-light-gray" type="button" data-bs-toggle="collapse"
+                  data-bs-target="#flush-collapseTwos" aria-expanded="false" aria-controls="flush-collapseTwos">
+                  <div class="row align-items-center w-100">
+                    <div class="col-lg-auto col-xl-auto col-12 number-box">2</div>
+                    <div class="col-lg-10 col-xl-10 col-12 question-box">What happens if a supplier fails to meet one or
+                      more of the eligibility criteria?</div>
+                  </div>
+                </button>
+              </h2>
+              <div id="flush-collapseTwos" class="accordion-collapse collapse" aria-labelledby="flush-sheadingTwo"
+                data-bs-parent="#accordionFlushExample">
+                <div class="accordion-body">
+                  Suppliers must meet all eligibility criteria to qualify for partnership with Westgate. Failure to meet
+                  any criterion may result in the application being rejected or additional requirements being requested.
+                </div>
+              </div>
+            </div>
+
+          </div>
+        </div>
+      </div>
     </div>
   </section>
+
 </main>
