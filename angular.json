@@ -32,12 +32,14 @@
             "styles": [
               "src/styles.scss",
               "src/assets/css/style.css",
+              "src/assets/vendor/aos/aos.css",
               "node_modules/bootstrap/scss/bootstrap.scss",
               "node_modules/bootstrap-icons/font/bootstrap-icons.css"
             ],
             "scripts": [
               "src/assets/js/jquery.min.js",
               "src/assets/js/main.js",
+              "src/assets/vendor/aos/aos.js",
               "node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"
             ]
           },
@@ -102,12 +104,14 @@
             "styles": [
               "src/styles.scss",
               "src/assets/css/style.css",
+              "src/assets/vendor/aos/aos.css",
               "node_modules/bootstrap/scss/bootstrap.scss",
               "node_modules/bootstrap-icons/font/bootstrap-icons.css"
             ],
             "scripts": [
               "src/assets/js/jquery.min.js",
               "src/assets/js/main.js",
+              "src/assets/vendor/aos/aos.js",
               "node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"
             ]
           }
