@@ -84,6 +84,9 @@ ol {
 .desktop-right {
   text-align: right;
 }
+.desktop-end{
+  text-align: right;
+}
 
 .desktop-pt200 {
   padding-top: 200px;
@@ -784,7 +787,7 @@ Hero Slider section
   position: absolute;
   width: 100%;
   height: 100%;
-  background-color: rgba(0, 0, 0, 0.5);
+  background-color: rgba(0, 0, 0, 0.3);
   z-index: 1;
 }
 
@@ -1310,7 +1313,7 @@ Media Query CSS
   }
 
   .carousel-inner .carousel-caption {
-    top: 30%;
+    top: 20%;
   }
 
   .carousel-inner .carousel-caption h5 {
@@ -1364,5 +1367,11 @@ Media Query CSS
 
   .mobile-hide {
     display: none;
+  }
+  #footer{
+    text-align: center;
+  }
+  .desktop-end{
+    text-align: center;
   }
 }
