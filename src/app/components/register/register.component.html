@@ -193,20 +193,23 @@
                       <!-- <span class="text-danger" *ngIf="step2Form.controls.numberOfEmployees?.touched && step2Form.controls.numberOfEmployees?.errors?.['required']">Please enter numberOfEmployees</span> -->
                     </div>
                   </div>
-                  <div class="col-lg-6 col-xl-6 col-md-6 col-sm-6 col-12">
+                  <div class="col-lg-12 col-xl-12 col-md-12 col-sm-12 col-12">
                     <div class="form-group">
                       <label>Add Categories *
                         <small>(Eg. Website Development, App Development
                           Etc..,)</small></label>
-                      <ng-select mul class="form-select custom-ng-select-option" [items]="categoryList"
+                      <!-- <ng-select mul class="form-select custom-ng-select-option" [items]="categoryList"
                         bindLabel="category" [multiple]="true" bindValue="category" formControlName="sector">
-                      </ng-select>
+                      </ng-select> -->
                       <!-- <select class="form-select" formControlName="sector">
                         <option value="" disabled selected>Select Categories</option>
                         <option value="categories1">Categories 1</option>
                         <option value="categories2">Categories 2</option>
                         <option value="categories3">Categories 3</option>
                       </select> -->
+                      <select name="sectors" class="form-select custom-ng-select-option" multiple formControlName="sector">
+                        <option *ngFor="let category of categoryList" [value]="category.category">{{ category.category }}</option>
+                      </select>
                       <span class="text-danger"
                         *ngIf="step2Form.controls.sector?.touched && step2Form.controls.sector?.errors?.['required']">Please
                         select sector</span>
