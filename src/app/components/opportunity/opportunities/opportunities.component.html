@@ -128,7 +128,7 @@
                   {{ showMore[i] ? project.description : (project.description | slice: 0:20) }}  <span
                     *ngIf="!showMore[i]">...</span>
                   <a href="javascript:;" *ngIf="!showMore[i]" (click)="onShow(i)">Show More</a>
-                  <a href="javascript:;" *ngIf="showMore[i]" (click)="onShow(i)">Show Less</a>
+                  <a href="javascript:;" *ngIf="showMore[i]" (click)="onShow(i)"> Show Less</a>
 
                 </p>
 
