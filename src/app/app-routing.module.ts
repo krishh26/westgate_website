@@ -98,7 +98,7 @@ const routes: Routes = [
     component: WhyUsComponent
   },
   {
-    path: 'working-modal',
+    path: 'working-model',
     component: WorkingModalComponent
   },
   {
