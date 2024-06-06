@@ -24,6 +24,11 @@ export class OpportunitiesComponent {
   page: number = pagination.page;
   pagesize = pagination.itemsPerPage;
   content: TemplateRef<any> | undefined;
+  deafultSlice = 20;
+  showViewBtn = true;
+  
+  showMore: boolean[] = [];
+
   constructor(
     private projectService: ProjectService,
     private notificationService: NotificationService,
@@ -31,6 +36,7 @@ export class OpportunitiesComponent {
     private localStorageService: LocalStorageService,
   ) {
     this.getProjectList(this.todayDate);
+  //  this.showMore = this.projectList?.description.map(() => false);
   }
 
   ngOnInit(): void {
@@ -46,6 +52,8 @@ export class OpportunitiesComponent {
       if (response?.status == true) {
         this.showLoader = false;
         this.categoryList = response?.data;
+        this.totalRecords = this.categoryList.length;
+        this.showMore = this.categoryList.map(() => false);
       } else {
         this.notificationService.showError(response?.message);
         this.showLoader = false;
@@ -97,7 +105,6 @@ export class OpportunitiesComponent {
     });
   }
 
-
   radioSelected(event:any){
     this.selectedValue = event?.target?.value;
     if(this.selectedValue == 'today'){
@@ -105,4 +112,16 @@ export class OpportunitiesComponent {
       this.getProjectList(todayDate)
     }
   }
+
+  viewmoredes(count: any, total: any) {
+    this.deafultSlice += count;
+    if (this.deafultSlice >= total) {
+      this.showViewBtn = false;
+    }
+  }
+
+  onShow(index: number) {
+    this.showMore[index] = !this.showMore[index];
+  }
+
 }
