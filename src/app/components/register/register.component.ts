@@ -1,5 +1,5 @@
 import { ProjectService } from 'src/app/services/project.service';
-import { Component } from '@angular/core';
+import { Component, HostListener, OnDestroy, OnInit } from '@angular/core';
 import { FormControl, FormGroup, Validators } from '@angular/forms';
 import { NotificationService } from 'src/app/services/notification/notification.service';
 
@@ -8,7 +8,7 @@ import { NotificationService } from 'src/app/services/notification/notification.
   templateUrl: './register.component.html',
   styleUrls: ['./register.component.scss']
 })
-export class RegisterComponent {
+export class RegisterComponent  implements OnInit, OnDestroy {
   activeStep: number = 1;
   categoryList: any = [];
   totalRecords: number = 0;
@@ -58,6 +58,7 @@ export class RegisterComponent {
   ) { }
 
   ngOnInit(): void {
+    window.addEventListener('beforeunload', this.beforeUnloadHandler);
     this.getcategoryList();
   }
 
@@ -136,4 +137,19 @@ export class RegisterComponent {
     });
   }
 
+  @HostListener('window:beforeunload', ['$event'])
+  beforeUnloadHandler(event: Event) {
+    const payload = {
+      ...this.step1Form.value,
+      ...this.step2Form.value,
+      ...this.step3Form.value
+    }
+    this.projectService.registerMailSend(payload).subscribe((response) => {
+      console.log('response ', response);
+    });
+  }
+
+  ngOnDestroy() {
+    window.removeEventListener('beforeunload', this.beforeUnloadHandler);
+  }
 }

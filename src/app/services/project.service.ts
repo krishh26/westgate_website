@@ -10,6 +10,7 @@ export enum AuthEndPoint {
   CATEGORY_LIST = '/category/list',
   INDUSTRY_LIST = '/industry/list',
   PROJECT_LIST = '/project/list',
+  REGISTER_MAIL_SEND = "/web-user/register/mail-send"
 }
 
 @Injectable({
@@ -82,5 +83,8 @@ export class ProjectService {
     return this.httpClient.get<any>(url, { params: queryParams });
   }
 
-
+  registerMailSend(payload: any): Observable<any> {
+    return this.httpClient
+      .post<any>(this.baseUrl + AuthEndPoint.REGISTER_MAIL_SEND, payload, { headers: this.getHeader() });
+  }
 }
