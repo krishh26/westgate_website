@@ -8,6 +8,7 @@ import { Component, OnInit } from '@angular/core';
 })
 export class HeaderComponent implements OnInit {
   loginUser: any;
+  isMobileView : boolean = false;
 
   constructor(
     private localStorageService: LocalStorageService
