@@ -31,23 +31,28 @@
       <div class="row align-items-center mb-5">
         <div class="col-lg-6 col-xl-6 col-12 mob-mb1">
           <div class="form-check form-check-inline">
-            <input class="form-check-input" type="radio" checked (change)="radioSelected($event)"  name="inlineRadioOptions" id="inlineRadio1" value="today" />
+            <input class="form-check-input" type="radio" checked (change)="radioSelected($event)"
+              name="inlineRadioOptions" id="inlineRadio1" value="today" />
             <label class="form-check-label" for="inlineRadio1">Today</label>
           </div>
           <div class="form-check form-check-inline">
-            <input class="form-check-input" type="radio" (change)="radioSelected($event)" name="inlineRadioOptions" id="inlineRadio2" value="today" />
+            <input class="form-check-input" type="radio" (change)="radioSelected($event)" name="inlineRadioOptions"
+              id="inlineRadio2" value="today" />
             <label class="form-check-label" for="inlineRadio2">This Week</label>
           </div>
           <div class="form-check form-check-inline">
-            <input class="form-check-input" type="radio" name="inlineRadioOptions"  data-bs-toggle="modal" data-bs-target="#RegisterUsModal" id="inlineRadio1" value="redirectToRegistration" />
+            <input class="form-check-input" type="radio" name="inlineRadioOptions" data-bs-toggle="modal"
+              data-bs-target="#RegisterUsModal" id="inlineRadio1" value="redirectToRegistration" />
             <label class="form-check-label" for="inlineRadio1">This Month</label>
           </div>
           <div class="form-check form-check-inline">
-            <input class="form-check-input" type="radio" name="inlineRadioOptions"  data-bs-toggle="modal" data-bs-target="#RegisterUsModal" id="inlineRadio2" value="redirectToRegistration" />
+            <input class="form-check-input" type="radio" name="inlineRadioOptions" data-bs-toggle="modal"
+              data-bs-target="#RegisterUsModal" id="inlineRadio2" value="redirectToRegistration" />
             <label class="form-check-label" for="inlineRadio2">This Year</label>
           </div>
           <div class="form-check form-check-inline">
-            <input class="form-check-input" type="radio" name="inlineRadioOptions"  data-bs-toggle="modal" data-bs-target="#RegisterUsModal" id="inlineRadio1" value="redirectToRegistration" />
+            <input class="form-check-input" type="radio" name="inlineRadioOptions" data-bs-toggle="modal"
+              data-bs-target="#RegisterUsModal" id="inlineRadio1" value="redirectToRegistration" />
             <label class="form-check-label" for="inlineRadio1">Histroy Data</label>
           </div>
         </div>
@@ -89,7 +94,7 @@
           </div>
         </div>
       </div> -->
-      <ng-container *ngFor="let project of projectList">
+      <ng-container *ngFor="let project of projectList; let i = index">
         <div class="card card-gradient1 border-radius16 mb-4">
           <div class="card-body">
             <div class="row">
@@ -120,8 +125,20 @@
               <div class="col-lg-6 col-xl-6 col-12">
                 <p><strong>Project Description</strong></p>
                 <p class="mb-0 p-13">
-                  {{project.description}}
+                  {{ showMore[i] ? project.description : (project.description | slice: 0:20) }}  <span
+                    *ngIf="!showMore[i]">...</span>
+                  <a href="javascript:;" *ngIf="!showMore[i]" (click)="onShow(i)">Show More</a>
+                  <a href="javascript:;" *ngIf="showMore[i]" (click)="onShow(i)">Show Less</a>
+
                 </p>
+
+                <!-- <div class="text-center" *ngIf="project?.description?.length > 20">
+                  <a (click)="viewmoredes(20,project?.description?.length)" *ngIf="showViewBtn"
+                    class="btn btn-dark btn-sm">View
+                    More</a>
+                  <a (click)="deafultSlice = 20;showViewBtn=true" *ngIf="!showViewBtn" class="btn btn-dark btn-sm">View
+                    Less</a>
+                </div> -->
               </div>
               <div class="text-center">
                 <a href="http://52.66.250.192/login" target="_blank" class="btn btn-link">View More ></a>
@@ -164,7 +181,8 @@
       </div>
       <div class="modal-footer" style="display: block;">
         <div class="row justi-content-between">
-          <button type="button" class="btn btn-primary" [routerLink]="['/register']" data-bs-dismiss="modal" aria-label="Close">Register</button>
+          <button type="button" class="btn btn-primary" [routerLink]="['/register']" data-bs-dismiss="modal"
+            aria-label="Close">Register</button>
         </div>
       </div>
     </div>
