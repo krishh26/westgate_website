@@ -28,10 +28,10 @@ export class RegisterComponent  implements OnInit, OnDestroy {
   step1 = {
     companyName: new FormControl("", [Validators.required]),
     email: new FormControl("", [Validators.required, Validators.pattern(Patterns.email)]),
-    password: new FormControl("", [Validators.required]),
+    password: new FormControl("", [Validators.required,Validators.pattern(Patterns.password)]),
     name: new FormControl("", [Validators.required]),
     designation: new FormControl("", [Validators.required]),
-    number: new FormControl("", [Validators.required]),
+    number: new FormControl("", [Validators.required , Validators.pattern(Patterns.mobile)]),
   };
 
   step2 = {
@@ -40,7 +40,7 @@ export class RegisterComponent  implements OnInit, OnDestroy {
     registerNumber: new FormControl("",),
     mainOfficeAddress: new FormControl("", [Validators.required]),
     website: new FormControl("", [Validators.required]),
-    companyContactNumber: new FormControl(""),
+    companyContactNumber: new FormControl("", [Validators.required, Validators.pattern(Patterns.mobile)]),
     numberOfEmployees: new FormControl("", [Validators.required]),
     sector: new FormControl("", [Validators.required]),
   };

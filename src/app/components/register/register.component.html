@@ -66,6 +66,11 @@
                       <span class="text-danger"
                         *ngIf="step1Form.controls.number?.touched && step1Form.controls.number?.errors?.['required']">Please
                         enter mobile number </span>
+                      <span class="text-danger" *ngIf="
+                        step1Form.controls.number?.touched &&
+                        step1Form.controls.number?.errors?.['pattern']">
+                        Please enter valid mobile number
+                      </span>
                     </div>
                   </div>
                   <div class="col-lg-6 col-xl-6 col-md-6 col-sm-6 col-12">
@@ -76,6 +81,12 @@
                       <span class="text-danger"
                         *ngIf="step1Form.controls.password?.touched && step1Form.controls.password?.errors?.['required']">Please
                         enter password </span>
+                      <span class="text-danger" *ngIf="
+                        step1Form.controls.password?.touched &&
+                        step1Form.controls.password?.errors?.['pattern']
+                    ">
+                        Please enter valid password
+                      </span>
                     </div>
                   </div>
                 </div>
@@ -159,7 +170,7 @@
                   </div>
                   <div class="col-lg-6 col-xl-6 col-md-6 col-sm-6 col-12">
                     <div class="form-group">
-                      <span class="input-icon" style="top: 35px !important;"><i class="bi bi-crosshair"></i></span>
+                      <!-- <span class="input-icon" style="top: 35px !important;"><i class="bi bi-crosshair"></i></span> -->
                       <label>Main Office Address *</label>
                       <input formControlName="mainOfficeAddress" placeholder="Enter address" type="text"
                         class="form-control" />
@@ -183,6 +194,14 @@
                       <input formControlName="companyContactNumber" placeholder="Enter company contact number"
                         type="text" class="form-control" [maxlength]="10" [minlength]="10"
                         (keypress)="NumberOnly($event)" />
+                        <span class="text-danger"
+                        *ngIf="step2Form.controls.companyContactNumber?.touched && step2Form.controls.companyContactNumber?.errors?.['required']">Please
+                        enter mobile number </span>
+                      <span class="text-danger" *ngIf="
+                        step2Form.controls.companyContactNumber?.touched &&
+                        step2Form.controls.companyContactNumber?.errors?.['pattern']">
+                        Please enter valid mobile number
+                      </span>
                     </div>
                   </div>
                   <div class="col-lg-6 col-xl-6 col-md-6 col-sm-6 col-12">
