@@ -188,7 +188,7 @@
                   <div class="col-lg-6 col-xl-6 col-md-6 col-sm-6 col-12">
                     <div class="form-group">
                       <label>Number of Employees *</label>
-                      <input formControlName="numberOfEmployees" placeholder="Enter number of employees" type="number"
+                      <input formControlName="numberOfEmployees" placeholder="Enter number of employees" type="number" (keypress)="NumberOnly($event)"
                         class="form-control" />
                       <!-- <span class="text-danger" *ngIf="step2Form.controls.numberOfEmployees?.touched && step2Form.controls.numberOfEmployees?.errors?.['required']">Please enter numberOfEmployees</span> -->
                     </div>
