@@ -53,7 +53,7 @@
                         *ngIf="step1Form.controls.email?.touched && step1Form.controls.email?.errors?.['required']">Please
                         enter email </span>
                       <span class="text-danger"
-                        *ngIf="step1Form.controls.email?.touched && step1Form.controls.email?.errors?.['email']">Please
+                        *ngIf="step1Form.controls.email?.touched && step1Form.controls.email?.errors?.['pattern']">Please
                         enter valid email </span>
                     </div>
                   </div>
@@ -188,8 +188,8 @@
                   <div class="col-lg-6 col-xl-6 col-md-6 col-sm-6 col-12">
                     <div class="form-group">
                       <label>Number of Employees *</label>
-                      <input formControlName="numberOfEmployees" placeholder="Enter number of employees" type="number" (keypress)="NumberOnly($event)"
-                        class="form-control" />
+                      <input formControlName="numberOfEmployees" placeholder="Enter number of employees" type="number"
+                        (keypress)="NumberOnly($event)" class="form-control" />
                       <!-- <span class="text-danger" *ngIf="step2Form.controls.numberOfEmployees?.touched && step2Form.controls.numberOfEmployees?.errors?.['required']">Please enter numberOfEmployees</span> -->
                     </div>
                   </div>
@@ -207,8 +207,10 @@
                         <option value="categories2">Categories 2</option>
                         <option value="categories3">Categories 3</option>
                       </select> -->
-                      <select name="sectors" class="form-select custom-ng-select-option" multiple formControlName="sector">
-                        <option *ngFor="let category of categoryList" [value]="category.category">{{ category.category }}</option>
+                      <select name="sectors" class="form-select custom-ng-select-option" multiple
+                        formControlName="sector">
+                        <option *ngFor="let category of categoryList" [value]="category.category">{{ category.category
+                          }}</option>
                       </select>
                       <span class="text-danger"
                         *ngIf="step2Form.controls.sector?.touched && step2Form.controls.sector?.errors?.['required']">Please
@@ -383,316 +385,6 @@
   </form>
 </main>
 
-<!-- <main id="main" *ngIf="activeStep == 4">
-  <section class="section-registration">
-    <div class="container">
-      <div class="row justify-content-center">
-        <div class="col-lg-10 col-xl-10 col-12">
-          <div class="registration-card">
-            <div class="card-body">
-              <div class="row mb-4">
-                <div class="col-12 text-center">
-                  <h1 class="HeadingTitle2">
-                    Eligibility Criteria
-                    <a
-                    (click)="nextStep(4)"
-                      class="btn btn-primary btn-sm float-end"
-                      >Skip</a
-                    >
-                  </h1>
-                </div>
-              </div>
-              <form>
-                <div class="row">
-                  <div class="col-12">
-                    <p class="text-muted">Please confirm the following</p>
-                  </div>
-                </div>
-                <div class="form-group">
-                  <div class="row">
-                    <div class="col-lg-8 col-xl-8 col-12">
-                      <label
-                        ><strong
-                          >Are you a registered company in India?</strong
-                        ></label
-                      >
-                    </div>
-                    <div class="col-lg-4 col-xl-4 col-12">
-                      <div class="form-check form-check-inline">
-                        <input
-                          class="form-check-input"
-                          type="radio"
-                          name="inlineRadioOptions"
-                          id="inlineRadio1"
-                          value="option1"
-                        />
-                        <label class="form-check-label" for="inlineRadio1"
-                          >Yes</label
-                        >
-                      </div>
-                      <div class="form-check form-check-inline">
-                        <input
-                          class="form-check-input"
-                          type="radio"
-                          name="inlineRadioOptions"
-                          id="inlineRadio2"
-                          value="option2"
-                        />
-                        <label class="form-check-label" for="inlineRadio2"
-                          >No</label
-                        >
-                      </div>
-                    </div>
-                  </div>
-                </div>
-                <div class="form-group">
-                  <div class="row">
-                    <div class="col-lg-8 col-xl-8 col-12">
-                      <label
-                        ><strong
-                          >Is your company currently active?</strong
-                        ></label
-                      >
-                    </div>
-                    <div class="col-lg-4 col-xl-4 col-12">
-                      <div class="form-check form-check-inline">
-                        <input
-                          class="form-check-input"
-                          type="radio"
-                          name="inlineRadioOptions"
-                          id="inlineRadio1"
-                          value="option1"
-                        />
-                        <label class="form-check-label" for="inlineRadio1"
-                          >Yes</label
-                        >
-                      </div>
-                      <div class="form-check form-check-inline">
-                        <input
-                          class="form-check-input"
-                          type="radio"
-                          name="inlineRadioOptions"
-                          id="inlineRadio2"
-                          value="option2"
-                        />
-                        <label class="form-check-label" for="inlineRadio2"
-                          >No</label
-                        >
-                      </div>
-                    </div>
-                  </div>
-                </div>
-                <div class="form-group">
-                  <div class="row">
-                    <div class="col-lg-8 col-xl-8 col-12">
-                      <label
-                        ><strong
-                          >How many years has your company been in
-                          business?</strong
-                        ></label
-                      >
-                    </div>
-                    <div class="col-lg-4 col-xl-4 col-12">
-                      <input type="text" class="form-control" />
-                    </div>
-                  </div>
-                </div>
-                <div class="form-group">
-                  <div class="row">
-                    <div class="col-lg-8 col-xl-8 col-12">
-                      <label
-                        ><strong
-                          >Can you provide case studies showcasing previous
-                          projects?</strong
-                        ></label
-                      >
-                    </div>
-                    <div class="col-lg-4 col-xl-4 col-12">
-                      <div class="form-check form-check-inline">
-                        <input
-                          class="form-check-input"
-                          type="radio"
-                          name="inlineRadioOptions"
-                          id="inlineRadio1"
-                          value="option1"
-                        />
-                        <label class="form-check-label" for="inlineRadio1"
-                          >Yes</label
-                        >
-                      </div>
-                      <div class="form-check form-check-inline">
-                        <input
-                          class="form-check-input"
-                          type="radio"
-                          name="inlineRadioOptions"
-                          id="inlineRadio2"
-                          value="option2"
-                        />
-                        <label class="form-check-label" for="inlineRadio2"
-                          >No</label
-                        >
-                      </div>
-                    </div>
-                  </div>
-                </div>
-                <div class="form-group">
-                  <div class="row">
-                    <div class="col-lg-8 col-xl-8 col-12">
-                      <label
-                        ><strong
-                          >Are you willing to nominate an account manager to
-                          work with us?</strong
-                        ></label
-                      >
-                    </div>
-                    <div class="col-lg-4 col-xl-4 col-12">
-                      <div class="form-check form-check-inline">
-                        <input
-                          class="form-check-input"
-                          type="radio"
-                          name="inlineRadioOptions"
-                          id="inlineRadio1"
-                          value="option1"
-                        />
-                        <label class="form-check-label" for="inlineRadio1"
-                          >Yes</label
-                        >
-                      </div>
-                      <div class="form-check form-check-inline">
-                        <input
-                          class="form-check-input"
-                          type="radio"
-                          name="inlineRadioOptions"
-                          id="inlineRadio2"
-                          value="option2"
-                        />
-                        <label class="form-check-label" for="inlineRadio2"
-                          >No</label
-                        >
-                      </div>
-                    </div>
-                  </div>
-                </div>
-                <div class="form-group">
-                  <div class="row">
-                    <div class="col-lg-8 col-xl-8 col-12">
-                      <label
-                        ><strong
-                          >Do you have current manpower to support any new
-                          business?</strong
-                        ></label
-                      >
-                    </div>
-                    <div class="col-lg-4 col-xl-4 col-12">
-                      <div class="form-check form-check-inline">
-                        <input
-                          class="form-check-input"
-                          type="radio"
-                          name="inlineRadioOptions"
-                          id="inlineRadio1"
-                          value="option1"
-                        />
-                        <label class="form-check-label" for="inlineRadio1"
-                          >Yes</label
-                        >
-                      </div>
-                      <div class="form-check form-check-inline">
-                        <input
-                          class="form-check-input"
-                          type="radio"
-                          name="inlineRadioOptions"
-                          id="inlineRadio2"
-                          value="option2"
-                        />
-                        <label class="form-check-label" for="inlineRadio2"
-                          >No</label
-                        >
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </form>
-
-              <div class="form-group text-center mt-4">
-                <button
-                  type="button"
-                  class="btn btn-lightgray box-shadow"
-                  (click)="nextStep(4)"
-                >
-                  Proceed
-                </button>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-</main>
-
-<main id="main" *ngIf="activeStep == 5">
-  <section class="section-registration">
-    <div class="container">
-      <div class="row justify-content-center">
-        <div class="col-lg-10 col-xl-10 col-12">
-          <div class="registration-card">
-            <div class="card-body">
-              <div class="row mb-4">
-                <div class="col-12 text-center">
-                  <h1 class="HeadingTitle2">
-                    Nominate Account Manager
-                    <a
-                      (click)="nextStep(5)"
-                      class="btn btn-primary btn-sm float-end"
-                      >Skip</a
-                    >
-                  </h1>
-                </div>
-              </div>
-              <form>
-                <div class="row justify-content-center">
-                  <div class="col-lg-7 col-xl-7 col-12">
-                    <div class="form-group">
-                      <label>Account Manager Name</label>
-                      <input type="text" placeholder="Enter name" class="form-control" />
-                    </div>
-                    <div class="form-group">
-                      <label>Email ID</label>
-                      <input type="email" placeholder="Enter email" class="form-control" />
-                    </div>
-                    <div class="form-group">
-                      <label>Account Manager Designation</label>
-                      <input type="text" placeholder="Enter Designation" class="form-control" />
-                    </div>
-                    <div class="form-group">
-                      <label>Active Since</label>
-                      <input type="text" placeholder="Enter active since" class="form-control" />
-                    </div>
-                    <div class="form-group">
-                      <label>Mobile Number</label>
-                      <input type="text" placeholder="Enter mobile number"  class="form-control" />
-                    </div>
-                  </div>
-                </div>
-              </form>
-
-              <div class="form-group text-center mt-4">
-                <button
-                  type="button"
-                  class="btn btn-lightgray box-shadow"
-                  (click)="nextStep(5)"
-                >
-                  Done
-                </button>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-</main> -->
-
 <main id="main" *ngIf="activeStep == 6">
   <section class="section-registration">
     <div class="container">
@@ -704,8 +396,9 @@
                 <div class="col-12 text-center">
                   <img src="assets/img/success-icon.gif" width="100" class="mt-5 mb-5" />
                   <h5 class="mb-5">
-                    <strong>Thank you for providing this information, our team will
-                      get back to you soon</strong>
+                    <strong>Thankyou for registering with us Our team will review it and get back to you soon. Once our
+                      line manager verifies the details, you will be able to log in. You will receive an email with the
+                      next steps.</strong>
                   </h5>
                   <p class="text-muted">support@westgateithub.com</p>
                   <p class="text-muted">+917781978685</p>

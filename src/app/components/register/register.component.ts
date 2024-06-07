@@ -2,6 +2,7 @@ import { ProjectService } from 'src/app/services/project.service';
 import { Component, HostListener, OnDestroy, OnInit } from '@angular/core';
 import { FormControl, FormGroup, Validators } from '@angular/forms';
 import { NotificationService } from 'src/app/services/notification/notification.service';
+import { Patterns } from 'src/app/core/constant/validation-patterns.const';
 
 @Component({
   selector: 'app-register',
@@ -26,7 +27,7 @@ export class RegisterComponent  implements OnInit, OnDestroy {
 
   step1 = {
     companyName: new FormControl("", [Validators.required]),
-    email: new FormControl("", [Validators.required, Validators.email]),
+    email: new FormControl("", [Validators.required, Validators.pattern(Patterns.email)]),
     password: new FormControl("", [Validators.required]),
     name: new FormControl("", [Validators.required]),
     designation: new FormControl("", [Validators.required]),
