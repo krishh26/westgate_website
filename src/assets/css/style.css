@@ -91,6 +91,9 @@ ol {
 .desktop-pt200 {
   padding-top: 200px;
 }
+.desktop-hide{
+  display: none;
+}
 
 .text-theme {
   color: #0077DC;
@@ -113,7 +116,10 @@ ul.listing {
 ul.listing li {
   display: block;
 }
-
+.dp-0{
+  padding-left: 0px;
+  padding-right: 0px;
+}
 /*--------------------------------------------------------------
 # Preloader
 --------------------------------------------------------------*/
@@ -1360,6 +1366,9 @@ Media Query CSS
   .mob-mb1 {
     margin-bottom: 1rem;
   }
+  .mob-mb2 {
+    margin-bottom: 2rem;
+  }
 
   .registration-card .card-body {
     padding: 1rem;
@@ -1374,4 +1383,19 @@ Media Query CSS
   .desktop-end{
     text-align: center;
   }
+  
+.border-title .title {
+  left: 20%;
+}
+.dp-0{
+  padding-left: 15px;
+  padding-right: 15px;
+}
+.mobile-show{
+  display: block;
+}
+.mobile-hide{
+  display: none !important;
+}
+
 }

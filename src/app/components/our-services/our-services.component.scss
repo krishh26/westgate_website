@@ -39,13 +39,16 @@
 //   margin: 0 0.5em;
 //   border: 0;
 // }
-#ClientStories .carousel-inner, #ClientStories .carousel-item{
+#ClientStories .carousel-inner,
+#ClientStories .carousel-item {
   height: auto;
 }
-#ClientStories .carousel-item{
- padding-top: 30px;
- padding-bottom: 30px;
+
+#ClientStories .carousel-item {
+  padding-top: 30px;
+  padding-bottom: 30px;
 }
+
 #ClientStories .carousel-control-prev,
 #ClientStories .carousel-control-next {
   width: 3rem;
@@ -55,9 +58,21 @@
   top: 0%;
   transform: translateY(-50%);
 }
+
 #ClientStories .carousel-control-prev {
   left: 92%;
 }
+
 #ClientStories .carousel-control-next {
   right: 0%;
+}
+
+@media (max-width: 768px) {
+  #ClientStories .carousel-control-prev {
+    left: 70%;
+  }
+
+  .border-title .title {
+    left: 23%;
+  }
 }
