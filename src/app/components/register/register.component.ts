@@ -10,7 +10,7 @@ import { Patterns } from 'src/app/core/constant/validation-patterns.const';
   styleUrls: ['./register.component.scss']
 })
 export class RegisterComponent  implements OnInit, OnDestroy {
-  activeStep: number = 3;
+  activeStep: number = 1;
   categoryList: any = [];
   totalRecords: number = 0;
   showLoader: boolean = false;
