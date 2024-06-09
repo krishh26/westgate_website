@@ -7,6 +7,8 @@ import { LocalStorageService } from 'src/app/services/local-storage/local-storag
 import { NotificationService } from 'src/app/services/notification/notification.service';
 import { ProjectService } from 'src/app/services/project.service';
 
+declare var bootstrap: any;
+
 @Component({
   selector: 'app-opportunities',
   templateUrl: './opportunities.component.html',
@@ -26,7 +28,7 @@ export class OpportunitiesComponent {
   content: TemplateRef<any> | undefined;
   deafultSlice = 20;
   showViewBtn = true;
-  
+
   showMore: boolean[] = [];
 
   constructor(
@@ -36,7 +38,7 @@ export class OpportunitiesComponent {
     private localStorageService: LocalStorageService,
   ) {
     this.getProjectList(this.todayDate);
-  //  this.showMore = this.projectList?.description.map(() => false);
+    //  this.showMore = this.projectList?.description.map(() => false);
   }
 
   ngOnInit(): void {
@@ -82,9 +84,9 @@ export class OpportunitiesComponent {
     });
   }
 
-  getProjectList(filter:string) {
+  getProjectList(filter: string) {
     this.showLoader = true;
-   Payload.projectList.createdDate = String(filter);
+    Payload.projectList.createdDate = String(filter);
     Payload.projectList.page = String(this.page);
     Payload.projectList.limit = String(this.pagesize);
     Payload.projectList.applied = false;
@@ -105,11 +107,22 @@ export class OpportunitiesComponent {
     });
   }
 
-  radioSelected(event:any){
+  radioSelected(event: any): void {
     this.selectedValue = event?.target?.value;
-    if(this.selectedValue == 'today'){
-    let todayDate = formatDate(new Date(), 'yyyy-MM-dd', 'en-US')
-      this.getProjectList(todayDate)
+
+    if (this.selectedValue === 'today') {
+      const todayDate = formatDate(new Date(), 'yyyy-MM-dd', 'en-US');
+      this.getProjectList(todayDate);
+    } else if (this.selectedValue === 'thisYear' || this.selectedValue === 'historyData') {
+      // Trigger the modal
+      const modalElement = document.getElementById('RegisterUsModal');
+      if (modalElement) {
+        const modal = new bootstrap.Modal(modalElement, {});
+        modal.show();
+      }
+    } else {
+      // Handle other selections or add other cases if needed
+      console.log('Selected value:', this.selectedValue);
     }
   }
 
