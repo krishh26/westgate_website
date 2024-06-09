@@ -183,9 +183,18 @@
                     <div class="form-group">
                       <label>Website *</label>
                       <input formControlName="website" placeholder="Enter website" type="text" class="form-control" />
-                      <span class="text-danger"
+                      <div class="text-danger" *ngIf="step2Form.get('website')?.invalid && step2Form.get('website')?.touched">
+                        <div *ngIf="step2Form.get('website')?.errors?.['required']">
+                          Website is required.
+                        </div>
+                        <div *ngIf="step2Form.get('website')?.errors?.['invalidUrl']">
+                          Please enter a valid URL.
+                        </div>
+                      </div>
+
+                      <!-- <span class="text-danger"
                         *ngIf="step2Form.controls.website?.touched && step2Form.controls.website?.errors?.['required']">Please
-                        enter website</span>
+                        enter website</span> -->
                     </div>
                   </div>
                   <div class="col-lg-6 col-xl-6 col-md-6 col-sm-6 col-12">
@@ -213,24 +222,13 @@
                     </div>
                   </div>
                   <div class="col-lg-12 col-xl-12 col-md-12 col-sm-12 col-12">
-                    <div class="form-group">
+                    <div>
                       <label>Add Categories *
                         <small>(Eg. Website Development, App Development
                           Etc..,)</small></label>
-                      <!-- <ng-select mul class="form-select custom-ng-select-option" [items]="categoryList"
-                        bindLabel="category" [multiple]="true" bindValue="category" formControlName="sector">
-                      </ng-select> -->
-                      <!-- <select class="form-select" formControlName="sector">
-                        <option value="" disabled selected>Select Categories</option>
-                        <option value="categories1">Categories 1</option>
-                        <option value="categories2">Categories 2</option>
-                        <option value="categories3">Categories 3</option>
-                      </select> -->
-                      <select name="sectors" class="form-select custom-ng-select-option" multiple
-                        formControlName="sector">
-                        <option *ngFor="let category of categoryList" [value]="category.category">{{ category.category
-                          }}</option>
-                      </select>
+                      <ng-select style="padding: 0px !important;" class="form-select custom-ng-select-option" [items]="categoryList"
+                        bindLabel="name" [multiple]="true" bindValue="id" formControlName="sector">
+                      </ng-select>
                       <span class="text-danger"
                         *ngIf="step2Form.controls.sector?.touched && step2Form.controls.sector?.errors?.['required']">Please
                         select sector</span>
@@ -276,14 +274,71 @@
                     formControlName="plan" />
                 </div>
                 <h2 class="title blue-gradient">Basic</h2>
-                <h5 class="text-muted">₹ 99,999/Year</h5>
-                <h5 class="text-success">₹ 49,999/Year ONLY</h5>
-                <p>Access OSS</p>
-                <p>View all projects listed for that and historical data.</p>
-                <p>
-                  (No option to see the Matched projects against your recorded
-                  expertise (Case studies))
-                </p>
+                <ul class="listing text-start mb-5">
+                  <li>
+                    <div class="row align-items-center">
+                      <div class="col-2">
+                        <i class="bi bi-check-lg text-success"></i>
+                      </div>
+                      <div class="col-10">
+                        <p class="mb-0">Access OSS</p>
+                      </div>
+                    </div>
+                  </li>
+                  <li>
+                    <div class="row align-items-center">
+                      <div class="col-2">
+                        <i class="bi bi-check-lg text-success"></i>
+                      </div>
+                      <div class="col-10">
+                        <p class="mb-0">View All Projects</p>
+                      </div>
+                    </div>
+                  </li>
+                  <li>
+                    <div class="row align-items-center">
+                      <div class="col-2">
+                        <i class="bi bi-x-lg text-danger"></i>
+                      </div>
+                      <div class="col-10">
+                        <p class="mb-0">Matched Projects</p>
+                      </div>
+                    </div>
+                  </li>
+                  <li>
+                    <div class="row align-items-center">
+                      <div class="col-2">
+                        <i class="bi bi-x-lg text-danger"></i>
+                      </div>
+                      <div class="col-10">
+                        <p class="mb-0">Feasibility Study</p>
+                      </div>
+                    </div>
+                  </li>
+                  <li>
+                    <div class="row align-items-center">
+                      <div class="col-2">
+                        <i class="bi bi-x-lg text-danger"></i>
+                      </div>
+                      <div class="col-10">
+                        <p class="mb-0">Bid Review by Westgate Experts</p>
+                      </div>
+                    </div>
+                  </li>
+                  <li>
+                    <div class="row align-items-center">
+                      <div class="col-2">
+                        <i class="bi bi-x-lg text-danger"></i>
+                      </div>
+                      <div class="col-10">
+                        <p class="mb-0">Bid Review by SHU Experts</p>
+                      </div>
+                    </div>
+                  </li>
+                </ul>
+                <p class="mb-0 text-muted"><del>₹ 99,999/Year</del></p>
+                <h2 class="text-success mb-0"><strong>₹ 49,999/-</strong></h2>
+                <p class="mb-0 text-muted"><small>Year ONLY</small></p>
               </div>
             </div>
           </div>
@@ -295,17 +350,71 @@
                     formControlName="plan" />
                 </div>
                 <h2 class="title silver-gradient">Silver</h2>
-                <h5 class="text-muted">₹ 3,49,999/Year</h5>
-                <h5 class="text-success">₹ 1,99,999/Year ONLY</h5>
-                <p>
-                  Access OSS/View all projects listed for that and historical
-                  data.
-                </p>
-                <p>+</p>
-                <p>
-                  List of MATCHED projects against your recorded expertise (Case
-                  studies)
-                </p>
+              <ul class="listing text-start mb-5">
+                <li>
+                  <div class="row align-items-center">
+                    <div class="col-2">
+                      <i class="bi bi-check-lg text-success"></i>
+                    </div>
+                    <div class="col-10">
+                      <p class="mb-0">Access OSS</p>
+                    </div>
+                  </div>
+                </li>
+                <li>
+                  <div class="row align-items-center">
+                    <div class="col-2">
+                      <i class="bi bi-check-lg text-success"></i>
+                    </div>
+                    <div class="col-10">
+                      <p class="mb-0">View All Projects</p>
+                    </div>
+                  </div>
+                </li>
+                <li>
+                  <div class="row align-items-center">
+                    <div class="col-2">
+                      <i class="bi bi-check-lg text-success"></i>
+                    </div>
+                    <div class="col-10">
+                      <p class="mb-0">Matched Projects</p>
+                    </div>
+                  </div>
+                </li>
+                <li>
+                  <div class="row align-items-center">
+                    <div class="col-2">
+                      <i class="bi bi-x-lg text-danger"></i>
+                    </div>
+                    <div class="col-10">
+                      <p class="mb-0">Feasibility Study</p>
+                    </div>
+                  </div>
+                </li>
+                <li>
+                  <div class="row align-items-center">
+                    <div class="col-2">
+                      <i class="bi bi-x-lg text-danger"></i>
+                    </div>
+                    <div class="col-10">
+                      <p class="mb-0">Bid Review by Westgate Experts</p>
+                    </div>
+                  </div>
+                </li>
+                <li>
+                  <div class="row align-items-center">
+                    <div class="col-2">
+                      <i class="bi bi-x-lg text-danger"></i>
+                    </div>
+                    <div class="col-10">
+                      <p class="mb-0">Bid Review by SHU Experts</p>
+                    </div>
+                  </div>
+                </li>
+              </ul>
+              <p class="mb-0 text-muted"><del>₹ 3,49,999/Year</del></p>
+              <h2 class="text-success mb-0"><strong>₹ 1,99,999/-</strong></h2>
+              <p class="mb-0 text-muted"><small>Year ONLY</small></p>
               </div>
             </div>
           </div>
@@ -317,17 +426,71 @@
                     formControlName="plan" />
                 </div>
                 <h2 class="title gold-gradient">Gold</h2>
-                <h5 class="text-muted">₹ 5,49,999/Year</h5>
-                <h5 class="text-success">₹ 3,99,999/Year ONLY</h5>
-                <p>
-                  Services listed at Silver (above) + Performing the full
-                  feasibility study of projects documents to prepare for project
-                  handover call between you and WG/SH
-                </p>
-                <p>
-                  + Review of your documents prior to engaging with Spectrum IT
-                  Hub Limited UK (The main bidder)
-                </p>
+                <ul class="listing text-start mb-5">
+                  <li>
+                    <div class="row align-items-center">
+                      <div class="col-2">
+                        <i class="bi bi-check-lg text-success"></i>
+                      </div>
+                      <div class="col-10">
+                        <p class="mb-0">Access OSS</p>
+                      </div>
+                    </div>
+                  </li>
+                  <li>
+                    <div class="row align-items-center">
+                      <div class="col-2">
+                        <i class="bi bi-check-lg text-success"></i>
+                      </div>
+                      <div class="col-10">
+                        <p class="mb-0">View All Projects</p>
+                      </div>
+                    </div>
+                  </li>
+                  <li>
+                    <div class="row align-items-center">
+                      <div class="col-2">
+                        <i class="bi bi-check-lg text-success"></i>
+                      </div>
+                      <div class="col-10">
+                        <p class="mb-0">Matched Projects</p>
+                      </div>
+                    </div>
+                  </li>
+                  <li>
+                    <div class="row align-items-center">
+                      <div class="col-2">
+                        <i class="bi bi-check-lg text-success"></i>
+                      </div>
+                      <div class="col-10">
+                        <p class="mb-0">Feasibility Study</p>
+                      </div>
+                    </div>
+                  </li>
+                  <li>
+                    <div class="row align-items-center">
+                      <div class="col-2">
+                        <i class="bi bi-check-lg text-success"></i>
+                      </div>
+                      <div class="col-10">
+                        <p class="mb-0">Bid Review by Westgate Experts</p>
+                      </div>
+                    </div>
+                  </li>
+                  <li>
+                    <div class="row align-items-center">
+                      <div class="col-2">
+                        <i class="bi bi-x-lg text-danger"></i>
+                      </div>
+                      <div class="col-10">
+                        <p class="mb-0">Bid Review by SHU Experts</p>
+                      </div>
+                    </div>
+                  </li>
+                </ul>
+                <p class="mb-0 text-muted"><del>₹ 5,49,999/Year</del></p>
+                <h2 class="text-success mb-0"><strong>₹ 3,99,999/-</strong></h2>
+                <p class="mb-0 text-muted"><small>Year ONLY</small></p>
               </div>
             </div>
           </div>
@@ -339,17 +502,71 @@
                     formControlName="plan" />
                 </div>
                 <h2 class="title platinum-gradient">Platinum</h2>
-                <h5 class="text-muted">₹ 7,49,999/Year</h5>
-                <h5 class="text-success">₹ 5,99,999/Year ONLY</h5>
-                <p>
-                  + Review of your documents prior to engaging with Spectrum IT
-                  Hub Limited UK (The main bidder)
-                </p>
-                <p>+</p>
-                <p>
-                  Review/amendments of any 25 proposals written by you during any
-                  12 months
-                </p>
+              <ul class="listing text-start mb-5">
+                <li>
+                  <div class="row align-items-center">
+                    <div class="col-2">
+                      <i class="bi bi-check-lg text-success"></i>
+                    </div>
+                    <div class="col-10">
+                      <p class="mb-0">Access OSS</p>
+                    </div>
+                  </div>
+                </li>
+                <li>
+                  <div class="row align-items-center">
+                    <div class="col-2">
+                      <i class="bi bi-check-lg text-success"></i>
+                    </div>
+                    <div class="col-10">
+                      <p class="mb-0">View All Projects</p>
+                    </div>
+                  </div>
+                </li>
+                <li>
+                  <div class="row align-items-center">
+                    <div class="col-2">
+                      <i class="bi bi-check-lg text-success"></i>
+                    </div>
+                    <div class="col-10">
+                      <p class="mb-0">Matched Projects</p>
+                    </div>
+                  </div>
+                </li>
+                <li>
+                  <div class="row align-items-center">
+                    <div class="col-2">
+                      <i class="bi bi-check-lg text-success"></i>
+                    </div>
+                    <div class="col-10">
+                      <p class="mb-0">Feasibility Study</p>
+                    </div>
+                  </div>
+                </li>
+                <li>
+                  <div class="row align-items-center">
+                    <div class="col-2">
+                      <i class="bi bi-check-lg text-success"></i>
+                    </div>
+                    <div class="col-10">
+                      <p class="mb-0">Bid Review by Westgate Experts</p>
+                    </div>
+                  </div>
+                </li>
+                <li>
+                  <div class="row align-items-center">
+                    <div class="col-2">
+                      <i class="bi bi-check-lg text-success"></i>
+                    </div>
+                    <div class="col-10">
+                      <p class="mb-0">Bid Review by SHU Experts</p>
+                    </div>
+                  </div>
+                </li>
+              </ul>
+              <p class="mb-0 text-muted"><del>₹ 7,49,999/Year</del></p>
+              <h2 class="text-success mb-0"><strong>₹ 5,99,999/-</strong></h2>
+              <p class="mb-0 text-muted"><small>Year ONLY</small></p>
               </div>
             </div>
           </div>
@@ -359,16 +576,33 @@
             <div class="price-card" style="min-height: 200px">
               <div class="card-body text-center">
                 <div class="form-check">
-                  <input class="form-check-input float-end" type="checkbox" value="" id="flexCheckDefault" />
+                  <input class="form-check-input float-end" type="checkbox" formControlName="plan"  value="Professional" id="flexCheckDefault" />
                 </div>
                 <h6 class="text-theme">Professional</h6>
-                <h5 class="text-success">
-                  50% of fee upfront & 50% after winning the bid
-                </h5>
-                <p>
-                  Supplier is happy to engage a 3rd party market expert within UK
-                  (for review/amendments of Bid we agree together)
-                </p>
+              <h5 class="text-success">50% of fee upfront &
+                50% after winning the bid</h5>
+              <ul class="listing text-start mb-5">
+                <li>
+                  <div class="row align-items-center">
+                    <div class="col-2">
+                      <i class="bi bi-check-lg text-success"></i>
+                    </div>
+                    <div class="col-10">
+                      <p class="mb-0">Bid Review by 3rd Party UK Expert (On demand)</p>
+                    </div>
+                  </div>
+                </li>
+                <li>
+                  <div class="row align-items-center">
+                    <div class="col-2">
+                      <i class="bi bi-x-lg text-danger"></i>
+                    </div>
+                    <div class="col-10">
+                      <p class="mb-0"> Bid Writing by 3rd Party UK Expert (on demand)</p>
+                    </div>
+                  </div>
+                </li>
+              </ul>
               </div>
             </div>
           </div>
@@ -376,16 +610,33 @@
             <div class="price-card" style="min-height: 200px">
               <div class="card-body text-center">
                 <div class="form-check">
-                  <input class="form-check-input float-end" type="checkbox" value="" id="flexCheckDefault" />
+                  <input class="form-check-input float-end" formControlName="plan"  type="checkbox" value="Professional +" id="flexCheckDefault" />
                 </div>
                 <h6 class="text-theme">Professional +</h6>
-                <h5 class="text-success">
-                  50% of fee upfront & 50% after winning the bid
-                </h5>
-                <p>
-                  Supplier is happy to engage a 3rd party market expert within UK
-                  for FULL WRITING services of any bid, we choose
-                </p>
+                <h5 class="text-success">50% of fee upfront &
+                  50% after winning the bid</h5>
+                <ul class="listing text-start mb-5">
+                  <li>
+                    <div class="row align-items-center">
+                      <div class="col-2">
+                        <i class="bi bi-x-lg text-danger"></i>
+                      </div>
+                      <div class="col-10">
+                        <p class="mb-0">Bid Review by 3rd Party UK Expert (On demand)</p>
+                      </div>
+                    </div>
+                  </li>
+                  <li>
+                    <div class="row align-items-center">
+                      <div class="col-2">
+                        <i class="bi bi-check-lg text-success"></i>
+                      </div>
+                      <div class="col-10">
+                        <p class="mb-0"> Bid Writing by 3rd Party UK Expert (on demand)</p>
+                      </div>
+                    </div>
+                  </li>
+                </ul>
               </div>
             </div>
           </div>
@@ -397,6 +648,9 @@
           </button>
           <button type="button" class="btn btn-lightgray box-shadow" (click)="nextStep(3)">
             Proceed
+          </button>
+          <button type="button" class="btn btn-lightgray box-shadow" (click)="skipPaymentPage(6)">
+            Skip
           </button>
         </div>
       </div>

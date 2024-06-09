@@ -7,6 +7,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="icon" type="image/x-icon" href="favicon.ico">
   <link rel="stylesheet" src="assets/vendor/aos/aos.css">
+  <link href="https://stackpath.bootstrapcdn.com/bootstrap/5.1.3/css/bootstrap.min.css" rel="stylesheet">
 </head>
 <body>
   <app-root></app-root>
@@ -14,5 +15,16 @@
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.min.js" integrity="sha384-0pUGZvbkm6XF6gxjEnlmuGrJXVbNuzT9qBBavbLwCsOGabYfZo0T0to5eqruptLy" crossorigin="anonymous"></script>
   <script src="./assets/vendor/aos/aos.js"></script>
   <script src="./assets/js/main.js"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/5.1.3/js/bootstrap.bundle.min.js"></script>
+  <script>
+    document.addEventListener('DOMContentLoaded', function () {
+      const tabDropdown = document.getElementById('tabDropdown');
+      tabDropdown.addEventListener('change', function () {
+        const selectedValue = tabDropdown.value;
+        const tabTrigger = new bootstrap.Tab(document.querySelector(`.nav-link[data-bs-target="${selectedValue}"]`));
+        tabTrigger.show();
+      });
+    });
+  </script>
 </body>
 </html>

@@ -28,10 +28,11 @@ import { OpportunitiesWebDevelopmentComponent } from './components/opportunity/o
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { HTTP_INTERCEPTORS, HttpClientModule } from '@angular/common/http';
 import { GeneralComponent } from './components/faq/general/general.component';
-import { NgSelectModule } from '@ng-select/ng-select';
 import { APIInterceptor } from './core/interceptor/ApiInterceptor';
 import { CommonModule } from '@angular/common';
 import { ToastrModule } from 'ngx-toastr';
+import { SelectModule } from 'ng2-select';
+import { NgSelectModule } from '@ng-select/ng-select';
 
 @NgModule({
   declarations: [
@@ -63,11 +64,12 @@ import { ToastrModule } from 'ngx-toastr';
   imports: [
     BrowserModule,
     AppRoutingModule,
-    FormsModule,
     ReactiveFormsModule,
+    FormsModule,
     HttpClientModule,
-    NgSelectModule,
     CommonModule,
+    // SelectModule,
+    NgSelectModule,
     ToastrModule.forRoot({
       timeOut: 3000,
       positionClass: 'toast-top-right',

@@ -10,7 +10,7 @@ import { Patterns } from 'src/app/core/constant/validation-patterns.const';
   styleUrls: ['./register.component.scss']
 })
 export class RegisterComponent  implements OnInit, OnDestroy {
-  activeStep: number = 1;
+  activeStep: number = 3;
   categoryList: any = [];
   totalRecords: number = 0;
   showLoader: boolean = false;
@@ -39,7 +39,7 @@ export class RegisterComponent  implements OnInit, OnDestroy {
     numberOfBranch: new FormControl("", [Validators.required]),
     registerNumber: new FormControl("",),
     mainOfficeAddress: new FormControl("", [Validators.required]),
-    website: new FormControl("", [Validators.required]),
+    website: new FormControl("", [Validators.required, this.urlValidator]),
     companyContactNumber: new FormControl("", [Validators.required, Validators.pattern(Patterns.mobile)]),
     numberOfEmployees: new FormControl("", [Validators.required]),
     sector: new FormControl("", [Validators.required]),
@@ -63,6 +63,7 @@ export class RegisterComponent  implements OnInit, OnDestroy {
     this.getcategoryList();
   }
 
+  // Number only validation
   NumberOnly(event: any): boolean {
     const charCode = event.which ? event.which : event.keyCode;
     if (charCode > 31 && (charCode < 48 || charCode > 57)) {
@@ -70,6 +71,16 @@ export class RegisterComponent  implements OnInit, OnDestroy {
     }
     return true;
   }
+
+  // website input validation
+  urlValidator(control: any): { [key: string]: boolean } | null {
+    const urlPattern = /^(https?:\/\/)?([\da-z.-]+)\.([a-z.]{2,6})([/\w .-]*)*\/?$/;
+    if (control.value && !urlPattern.test(control.value)) {
+      return { 'invalidUrl': true };
+    }
+    return null;
+  }
+
   nextStep(step: number) {
     switch (step) {
       case 1:
@@ -85,8 +96,10 @@ export class RegisterComponent  implements OnInit, OnDestroy {
         }
         break;
       case 3:
-        this.activeStep = 6;
-        this.submitForm();
+        if (this.step3Form.valid) {
+            this.activeStep = 6;
+            this.submitForm();
+        }
         break;
       case 4:
         // this.activeStep = 5;
@@ -120,6 +133,11 @@ export class RegisterComponent  implements OnInit, OnDestroy {
     this.activeStep = Number(activePage);
   }
 
+  skipPaymentPage(step : number) {
+    this.activeStep = Number(step);
+    this.submitForm();
+  }
+
   getcategoryList() {
     this.showLoader = true;
     this.projectService.getCategoryList().subscribe((response) => {
@@ -127,7 +145,15 @@ export class RegisterComponent  implements OnInit, OnDestroy {
       this.totalRecords = 0;
       if (response?.status == true) {
         this.showLoader = false;
-        this.categoryList = response?.data;
+        console.log('response?.data', response?.data);
+        response?.data?.map((element : any) => {
+          const data = {
+            id : element?._id,
+            name : element?.category
+          }
+          this.categoryList.push(data);
+        });
+        // this.categoryList = response?.data;
       } else {
         this.notificationService.showError(response?.message);
         this.showLoader = false;
