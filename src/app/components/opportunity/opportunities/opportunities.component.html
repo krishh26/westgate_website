@@ -114,7 +114,14 @@
               </div>
               <div class="col-lg-3 col-xl-3 col-12">
                 <p><strong>Project Value</strong></p>
-                <p>{{project.value}}</p>
+                <p>
+                  <ng-container *ngIf="project.value == 0">
+                    NA
+                  </ng-container>
+                  <ng-container *ngIf="project.value !== 0">
+                    {{project.value}}
+                  </ng-container>
+                </p>
               </div>
               <div class="col-lg-3 col-xl-3 col-12">
                 <p><strong>Category</strong></p>
