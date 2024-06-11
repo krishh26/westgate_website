@@ -29,7 +29,7 @@
   <section class="pt-0" data-aos="flip-down">
     <div class="container">
       <div class="row align-items-center mb-5">
-        <div class="col-lg-6 col-xl-6 col-12 mob-mb1">
+        <div class="col-lg-6 col-xl-6 col-12 mob-mb1 mobile-hide">
           <div class="form-check form-check-inline">
             <input class="form-check-input" type="radio" checked (change)="radioSelected($event)"
               name="inlineRadioOptions" id="inlineRadio1" value="today" />
@@ -79,9 +79,9 @@
           <button type="button" class="btn btn-primary">Search</button>
         </div> -->
       </div>
-      <!-- <div class="row align-items-center mb-5 desktop-hide mobile-show">
-        <div class="col-lg-6 col-xl-6 col-12 mob-mb1">
-          <select class="form-select">
+      <div class="row align-items-center mb-5 ">
+        <div class="col-lg-6 col-xl-6 col-12 mob-mb1 desktop-hide mobile-show" >
+          <select class="form-select" (change)="radioSelected($event)">
             <option value="today">Today</option>
             <option value="thisWeek">This Week</option>
             <option value="thisMonth">This Month</option>
@@ -89,7 +89,7 @@
             <option value="historyData">History Data</option>
           </select>
         </div>
-      </div> -->
+      </div>
       <div class="gradient-light-blue mb-4">
         <!-- <h4 class="text-theme">
           <strong>Project Count: 4 Value: 1.2 Million GBP</strong>
@@ -142,7 +142,7 @@
               <div class="col-lg-6 col-xl-6 col-12">
                 <p><strong>Project Description</strong></p>
                 <p class="mb-0 p-13">
-                  {{ showMore[i] ? project.description : (project.description | slice: 0:20) }}  <span
+                  {{ showMore[i] ? project.description : (project.description | slice: 0:20) }} <span
                     *ngIf="!showMore[i]">...</span>
                   <a href="javascript:;" *ngIf="!showMore[i]" (click)="onShow(i)">Show More</a>
                   <a href="javascript:;" *ngIf="showMore[i]" (click)="onShow(i)"> Show Less</a>

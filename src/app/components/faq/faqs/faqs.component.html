@@ -19,48 +19,75 @@
   <section class="p-0">
     <div class="container">
       <div class="form-group desktop-hide mobile-show">
+
         <select class="form-select" id="tabDropdown">
-          <option value="#aboutus">About us</option>
-          <option value="#general">General</option>
-          <option value="#costpricing">Cost & Pricing</option>
-          <option value="#legalcomplience">Legal & Compliance</option>
-          <option value="#registrationprocess">Registration process</option>
-          <option value="#partnershipopportunities">Partnership opportunities</option>
-          <option value="#suppliereligibility">Supplier eligibility criteria</option>
+          <option value="#aboutus" ata-bs-toggle="tab" data-bs-target="#general" role="tab" aria-controls="aboutus"
+            aria-selected="true" id="myTab">About us</option>
+
+          <option value="#general" data-bs-toggle="tab" data-bs-target="#general" role="tab" aria-controls="general"
+            aria-selected="false" id="general-tab">General</option>
+
+          <option value="#costpricing" id="costpricing-tab" data-bs-toggle="tab" data-bs-target="#costpricing"
+            role="tab" aria-controls="general" aria-selected="false">Cost & Pricing</option>
+
+          <option value="#legalcomplience" id="legalcomplience-tab" data-bs-toggle="tab"
+            data-bs-target="#legalcomplience" role="tab" aria-controls="legalcomplience" aria-selected="false">Legal &
+            Compliance</option>
+
+          <option value="#registrationprocess" id="registrationprocess-tab" data-bs-toggle="tab"
+            data-bs-target="#registrationprocess" role="tab" aria-controls="legalcomplience" aria-selected="false">
+            Registration process</option>
+
+          <option value="#partnershipopportunities" id="partnershipopportunities-tab" data-bs-toggle="tab"
+            data-bs-target="#partnershipopportunities" aria-controls="partnershipopportunities" aria-selected="false">
+            Partnership opportunities</option>
+
+          <option value="#suppliereligibility" id="suppliereligibility-tab" data-bs-toggle="tab"
+            data-bs-target="#suppliereligibility" role="tab" aria-controls="suppliereligibility" aria-selected="false">
+            Supplier eligibility criteria</option>
         </select>
       </div>
+      
       <ul class="nav nav-tabs mobile-hide" id="myTab" role="tablist" data-aos="flip-down">
+
         <li class="nav-item" role="presentation">
           <button class="nav-link active" id="aboutus-tab" data-bs-toggle="tab" data-bs-target="#aboutus" type="button"
             role="tab" aria-controls="aboutus" aria-selected="true">About us</button>
         </li>
+
         <li class="nav-item" role="presentation">
           <button class="nav-link" id="general-tab" data-bs-toggle="tab" data-bs-target="#general" type="button"
             role="tab" aria-controls="general" aria-selected="false">General</button>
         </li>
+
         <li class="nav-item" role="presentation">
           <button class="nav-link" id="costpricing-tab" data-bs-toggle="tab" data-bs-target="#costpricing" type="button"
             role="tab" aria-controls="costpricing" aria-selected="false">Cost & Pricing</button>
         </li>
+
         <li class="nav-item" role="presentation">
           <button class="nav-link" id="legalcomplience-tab" data-bs-toggle="tab" data-bs-target="#legalcomplience"
             type="button" role="tab" aria-controls="legalcomplience" aria-selected="false">Legal & Compliance</button>
         </li>
+
         <li class="nav-item" role="presentation">
           <button class="nav-link" id="registrationprocess-tab" data-bs-toggle="tab"
             data-bs-target="#registrationprocess" type="button" role="tab" aria-controls="registrationprocess"
             aria-selected="false">Registration process</button>
         </li>
+
         <li class="nav-item" role="presentation">
           <button class="nav-link" id="partnershipopportunities-tab" data-bs-toggle="tab"
             data-bs-target="#partnershipopportunities" type="button" role="tab" aria-controls="partnershipopportunities"
             aria-selected="false">Partnership opportunities</button>
         </li>
+
         <li class="nav-item" role="presentation">
           <button class="nav-link" id="suppliereligibility-tab" data-bs-toggle="tab"
             data-bs-target="#suppliereligibility" type="button" role="tab" aria-controls="suppliereligibility"
             aria-selected="false">Supplier eligibility criteria</button>
         </li>
+
       </ul>
       <div class="tab-content" id="myTabContent">
         <div class="tab-pane fade show active" id="aboutus" role="tabpanel" aria-labelledby="aboutus-tab">
