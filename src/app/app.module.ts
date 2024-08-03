@@ -31,7 +31,6 @@ import { GeneralComponent } from './components/faq/general/general.component';
 import { APIInterceptor } from './core/interceptor/ApiInterceptor';
 import { CommonModule, HashLocationStrategy, LocationStrategy } from '@angular/common';
 import { ToastrModule } from 'ngx-toastr';
-import { SelectModule } from 'ng2-select';
 import { NgSelectModule } from '@ng-select/ng-select';
 
 @NgModule({
